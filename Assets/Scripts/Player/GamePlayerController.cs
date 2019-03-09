@@ -12,23 +12,16 @@ public class GamePlayerController : MonoBehaviour
     private float _walkingSpeed;
     
     private Vector3 _inputDirection;
-    private Vector3 _previousInputDirection;
 
     private void FixedUpdate()
     {
         Debug.Log(_inputDirection);
-        if (_inputDirection == Vector3.zero)
-        {
-            _previousInputDirection = _inputDirection;
-            return;
-        }
+        if (_inputDirection == Vector3.zero) return;
 
         float resultDirectionSpeed =
             (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * _walkingSpeed;
         
         _playerRb.AddRelativeForce(_inputDirection * resultDirectionSpeed, ForceMode.VelocityChange);
-        
-        _previousInputDirection = _inputDirection;
     }
 
     // Update is called once per frame
