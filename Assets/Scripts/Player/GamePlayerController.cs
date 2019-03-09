@@ -15,13 +15,15 @@ public class GamePlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(_inputDirection);
-        if (_inputDirection == Vector3.zero) return;
+        if (_inputDirection == Vector3.zero)
+        {
+            _playerRb.velocity = new Vector3(0, _playerRb.velocity.y, 0);
+            return;
+        }
 
-        float resultDirectionSpeed =
-            (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * _walkingSpeed;
+        float resultDirectionSpeed = (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * _walkingSpeed;
         
-        _playerRb.AddRelativeForce(_inputDirection * resultDirectionSpeed, ForceMode.VelocityChange);
+        _playerRb.velocity = new Vector3(_inputDirection.x * resultDirectionSpeed, _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
     }
 
     // Update is called once per frame
