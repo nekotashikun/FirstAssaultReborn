@@ -1,16 +1,30 @@
-MIT License
-
 Copyright (c) 2019 first-assault-reborn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+in the Software with a single restriction; monetary use cases are strictly forbidden.
+This licence provides you, without limitation, the rights to use, copy, modify, merge,
+distribute, sublicense, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+
+DISCLAIMER:
+All original assets from Ghost In The Shell: First Assault 
+(which will be referred to as "the original game" for the rest of the licence)
+used by First Assault Reborn are the property of their respective owners. This includes,
+but is not limited to:
+- The original character cast (Motoko, Batou, etc.)
+- The original audio files from the original game
+- The original UI files that may or may not be used at the time any person may be reading this
+- The original guns provided from within the original game
+
+All assets and code created in addition for First Assault Reborn belong to their respective contributors.
+
+No code from the original game, in any programming language, is used inside First Assault Reborn.
+it is a complete remake inside Unity.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
