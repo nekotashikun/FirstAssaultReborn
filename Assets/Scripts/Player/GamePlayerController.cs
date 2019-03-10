@@ -57,7 +57,7 @@ public class GamePlayerController : MonoBehaviour
 
         float resultDirectionSpeed = (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * finalWalkingSpeed;
         
-        _playerRb.velocity = new Vector3(_inputDirection.x * resultDirectionSpeed, _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
+        _playerRb.velocity = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * new Vector3(_inputDirection.x * resultDirectionSpeed, _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
         _previousVelocity = _playerRb.velocity;
     }
 
@@ -79,11 +79,11 @@ public class GamePlayerController : MonoBehaviour
             _inputDirection.z = 0;
         }
 
-        if (Input.GetKey(_leftKey) && !Input.GetKey(_rightKey))
+        if (Input.GetKey(_rightKey) && !Input.GetKey(_leftKey))
         {
             _inputDirection.x = 1f;
         }
-        else if (Input.GetKey(_rightKey) && !Input.GetKey(_leftKey))
+        else if (Input.GetKey(_leftKey) && !Input.GetKey(_rightKey))
         {
             _inputDirection.x = -1f;
         }
