@@ -3,8 +3,11 @@
 
 public class GamePlayerController : MonoBehaviour
 {
-    [SerializeField] 
+    [Header("Controller Dependencies"),SerializeField] 
     private Rigidbody _playerRb;
+
+    [SerializeField]
+    private Camera _playerCamera;
 
     [Header("Speed settings"), SerializeField] 
     private float _walkingSpeed = 5f;
@@ -15,7 +18,7 @@ public class GamePlayerController : MonoBehaviour
     [SerializeField]
     private float _sprintMultiplier = 1.5f;
 
-    [Header("Key Bindings"), SerializeField]
+    [Header("Control Settings"), SerializeField]
     private KeyCode _forwardKey = KeyCode.W;
 
     [SerializeField]
@@ -29,6 +32,12 @@ public class GamePlayerController : MonoBehaviour
 
     [SerializeField]
     private KeyCode _sprintKey = KeyCode.LeftShift;
+
+    [SerializeField]
+    private float _mouseSensitivity = 1;
+
+    [SerializeField]
+    private bool _invertMouseY;
     
     private Vector3 _inputDirection;
     private bool _applyJump;
@@ -36,6 +45,7 @@ public class GamePlayerController : MonoBehaviour
     private bool _shouldApplySprintThroughJump;
     private bool _isOnGround = true;
     private Vector3 _previousVelocity;
+    private Quaternion _velocityDirection;
 
     private void FixedUpdate()
     {
@@ -57,14 +67,24 @@ public class GamePlayerController : MonoBehaviour
 
         float resultDirectionSpeed = (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * finalWalkingSpeed;
         
-        _playerRb.velocity = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * new Vector3(_inputDirection.x * resultDirectionSpeed, _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
+        _playerRb.velocity = _velocityDirection * new Vector3(_inputDirection.x * resultDirectionSpeed, _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
         _previousVelocity = _playerRb.velocity;
     }
 
     // Update is called once per frame
     private void Update()
     {
+        float mouseInputX = Input.GetAxis("Mouse X");
+        float mouseInputY = !_invertMouseY? -Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y");
+        
+        _playerCamera.transform.Rotate(mouseInputY * _mouseSensitivity, 0, 0);
+        transform.Rotate(0, mouseInputX * _mouseSensitivity, 0);
+        
+        
+        
         if (!_isOnGround) return;
+
+        _velocityDirection = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         
         if (Input.GetKey(_forwardKey) && !Input.GetKey(_backwardKey))
         {
