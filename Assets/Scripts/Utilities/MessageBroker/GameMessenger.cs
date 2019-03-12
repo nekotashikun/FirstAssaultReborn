@@ -5,29 +5,31 @@ namespace Utilities.MessageBroker
 {
     public class GameMessenger : PocoSingleton<GameMessenger>
     {
-        private Dictionary<Type, List<Delegate>> _messageMappings;
+        private readonly Dictionary<Type, List<Delegate>> _messageMappings;
 
         public GameMessenger()
         {
             _messageMappings = new Dictionary<Type, List<Delegate>>();
         }
 
-        public void RegisterSubscriberToMessageTypeOf<T>(Action<T> messageHandler)
+        public void RegisterSubscriberToMessageTypeOf<T>(Action<T> messageHandler) where T : struct
         {
             var messageType = typeof(T);
-            if(!_messageMappings.ContainsKey(messageType))
+            List<Delegate> result;
+            if (!_messageMappings.TryGetValue(messageType, out result))
             {
-                _messageMappings.Add(messageType, new List<Delegate>());
+                _messageMappings.Add(messageType, new List<Delegate> {messageHandler});
+                return;
             }
-            
+
             _messageMappings[messageType].Add(messageHandler);
         }
 
-        public void SendMessageOfType<T>(T message)
+        public void SendMessageOfType<T>(T message) where T : struct
         {
-
             var messageType = typeof(T);
-            if (!_messageMappings.ContainsKey(messageType)) return;
+            List<Delegate> result;
+            if (!_messageMappings.TryGetValue(messageType, out result) || result?.Count == 0) return;
 
             foreach (var listener in _messageMappings[messageType])
             {
