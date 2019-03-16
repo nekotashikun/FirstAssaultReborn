@@ -4,7 +4,7 @@ namespace Menu
 {
     public struct MenuMessage
     {
-        public MenuType MessageNumber { get; set; }
+        public MenuType MenuState { get; set; }
     }
 
     public enum MenuType
@@ -12,6 +12,8 @@ namespace Menu
         NONE,
         MAIN,
         OPTIONS,
-        PAUSE
+        PAUSE,
+        HUD,
+        EXIT
     }
 }

@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Menu
+namespace Menu.Control
 {
-    public class OptionsMenuControl : MonoBehaviour
+    public class MainMenuControl : MonoBehaviour
     {
         [Header("Buttons"), SerializeField]
-        private Button _backButton;
-
+        private Button _optionsButton;
+       
         private MenuController _menuController;
 
         void Start()
         {
             _menuController = GetComponentInParent<MenuController>();
-            _backButton.onClick.AddListener(SendMainMenuMessage);
+            _optionsButton.onClick.AddListener(GoToOptions);
         }
 
-        public void SendMainMenuMessage()
+        public void GoToOptions()
         {
-            Debug.Log("Going Back to Main Menu...");
-            _menuController.EnterMainMenu();
-            DestroyOptionsMenu();
+            _menuController.EnterOptionsMenu();
+            DestroyMainMenu();
         }
 
-        public void DestroyOptionsMenu()
+        public void DestroyMainMenu()
         {
             Destroy(this.gameObject);
         }
+
     }
 }

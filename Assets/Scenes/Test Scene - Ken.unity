@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menuGameObject: {fileID: 142148782}
-  _menuControllerPrefab: {fileID: 1968073264309499841, guid: 3b900c00c303cb14e8c210ea74fa597d,
+  _menuControllerPrefab: {fileID: 7847513268469912327, guid: a033022f61fcfeb45b0902276f83f2ef,
     type: 3}
   _eventSystemPrefab: {fileID: 1000012828009978, guid: a542afcebd359804799ebc0af3dd0ddc,
     type: 3}

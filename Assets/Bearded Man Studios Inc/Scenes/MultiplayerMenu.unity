@@ -462,3 +462,4 @@ MonoBehaviour:
     type: 3}
   _mainMenuPanel: {fileID: 6268164449324113643, guid: 6ed1231cbdc15c243909f51bfad55358,
     type: 3}
+  _pausePanel: {fileID: 0}

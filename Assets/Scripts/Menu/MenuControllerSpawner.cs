@@ -17,7 +17,7 @@ namespace Menu
     // Start is called before the first frame update
     void Start()
         {
-            if (_menuGameObject.GetComponents<MenuController>().Length == 0)
+            if (_menuGameObject.GetComponents<InGameMenuController>().Length == 0)
             {
                 Instantiate(_menuControllerPrefab);
                 Instantiate(_eventSystemPrefab);

@@ -1,50 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities.MessageBroker;
 
 namespace Menu
 {
-    public class MenuController : MonoBehaviour
+    public class InGameMenuController : MonoBehaviour
     {
         [Header("UI Prefabs"), SerializeField]
-        private GameObject _optionsPanel;
+        private GameObject _pausePanel;
         [SerializeField]
-        private GameObject _mainMenuPanel;
+        private GameObject _mainCanvas;
 
         private GameMessenger _messenger;
         private MenuMessage _message;
-        private GameObject _mainCanvas;
-      
+        //private GameObject _mainCanvas;
+
         void Start()
         {
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
-            _message.MenuState = MenuType.NONE;
-            _mainCanvas = GameObject.Find("Canvas");
+            _message.MenuState = MenuType.HUD;
+            Debug.Log(_mainCanvas.name);
+        }
 
-            if (SceneManager.GetActiveScene().name == "MultiplayerMenu")
-                EnterMainMenu();
-                
+        void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                if (_message.MenuState != MenuType.PAUSE)
+                {
+                    OpenPauseMenu();
+                }
+            }
         }
 
         private void HandleMessage(MenuMessage incomingMessage)
         {
             switch (incomingMessage.MenuState)
             {
-                case MenuType.NONE:
+                case MenuType.HUD:
                     {
                         break;
                     }
-                case MenuType.MAIN:
+                case MenuType.PAUSE:
                     {
-                        Instantiate(_mainMenuPanel, _mainCanvas.transform, false);
-                        _mainMenuPanel.SetActive(true);
+                        Instantiate(_pausePanel, _mainCanvas.transform, false);
+                        _pausePanel.SetActive(true);
                         break;
                     }
-                case MenuType.OPTIONS:
+                case MenuType.EXIT:
                     {
-                        Instantiate(_optionsPanel, _mainCanvas.transform, false);
-                        _optionsPanel.SetActive(true);
+                        SceneManager.LoadScene(0);
                         break;
                     }
                 default:
@@ -62,14 +70,9 @@ namespace Menu
             _messenger.SendMessageOfType<MenuMessage>(_message);
         }
 
-        public void EnterOptionsMenu()
+        public void OpenPauseMenu()
         {
-            SendMessage(MenuType.OPTIONS);
-        }
-
-        public void EnterMainMenu()
-        {
-            SendMessage(MenuType.MAIN);
+            SendMessage(MenuType.PAUSE);
         }
 
         public void OnDestroy()
