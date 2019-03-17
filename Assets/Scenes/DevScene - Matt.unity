@@ -188,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565138272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: -1.81}
+  m_LocalPosition: {x: -0, y: 1.57, z: 0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1751971802}
@@ -297,14 +297,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerRb: {fileID: 1751971798}
+  _playerCamera: {fileID: 565138274}
+  _weapon: {fileID: 0}
   _walkingSpeed: 5
   _jumpPower: 5
   _sprintMultiplier: 1.5
+  _cameraVerticalAngleLimit: 70
   _forwardKey: 119
   _backwardKey: 115
   _leftKey: 97
   _rightKey: 100
   _sprintKey: 304
+  _mouseSensitivity: 1
+  _invertMouseY: 0
+  _fireButton: 0
 --- !u!54 &1751971798
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 ﻿namespace Player
 {
-    public enum PlayerControllerState
+    public enum PlayerControllerMovementState
     {
         OnGround,
         OnGroundSprinting,

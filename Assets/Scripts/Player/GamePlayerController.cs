@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Weapons;
 
 namespace Player
 {
@@ -10,7 +11,10 @@ namespace Player
         [SerializeField]
         private Camera _playerCamera;
 
-        [Header("Speed settings"), SerializeField]
+        [SerializeField]
+        private BaseWeaponBehaviour _weapon;
+
+        [Header("Player Config"), SerializeField]
         private float _walkingSpeed = 5f;
 
         [SerializeField]
@@ -18,6 +22,9 @@ namespace Player
 
         [SerializeField]
         private float _sprintMultiplier = 1.5f;
+
+        [SerializeField]
+        private float _cameraVerticalAngleLimit = 70f;
 
         [Header("Control Settings"), SerializeField]
         private KeyCode _forwardKey = KeyCode.W;
@@ -40,29 +47,44 @@ namespace Player
         [SerializeField]
         private bool _invertMouseY;
 
+        [SerializeField]
+        private KeyCode _aimButton = KeyCode.Mouse1;
 
-        private PlayerControllerState _controllerState;
+        [SerializeField]
+        private KeyCode _fireButton = KeyCode.Mouse0;
+
+
+        private PlayerControllerMovementState _controllerMovementState;
         private Vector3 _inputDirection;
-        private Vector3 _previousVelocity;
         private Quaternion _velocityDirection;
+        private bool _isShooting;
+        private bool _isAiming;
+
 
         private void FixedUpdate()
         {
-            float finalWalkingSpeed = _walkingSpeed;
-            switch (_controllerState)
+            _weapon.ShouldAim = _isAiming;
+            
+            if (_isShooting)
             {
-                case PlayerControllerState.SprintJumpApplied:
-                case PlayerControllerState.OnGroundSprinting:
+                _weapon.Fire();
+            }
+
+            float finalWalkingSpeed = _walkingSpeed;
+
+            switch (_controllerMovementState)
+            {
+                case PlayerControllerMovementState.SprintJumpApplied:
+                case PlayerControllerMovementState.OnGroundSprinting:
                     finalWalkingSpeed *= _sprintMultiplier;
                     break;
-
-                case PlayerControllerState.Jumping:
-                case PlayerControllerState.SprintJumping:
-
-                    _controllerState = _controllerState == PlayerControllerState.SprintJumping
-                        ? PlayerControllerState.SprintJumpApplied
-                        : PlayerControllerState.JumpApplied;
-                    _playerRb.AddRelativeForce(0, _jumpPower, 0, ForceMode.VelocityChange);
+                case PlayerControllerMovementState.Jumping:
+                    ApplyJump();
+                    _controllerMovementState = PlayerControllerMovementState.JumpApplied;
+                    break;
+                case PlayerControllerMovementState.SprintJumping:
+                    ApplyJump();
+                    _controllerMovementState = PlayerControllerMovementState.SprintJumpApplied;
                     break;
             }
 
@@ -73,13 +95,16 @@ namespace Player
                 return;
             }
 
-
             float resultDirectionSpeed =
                 (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * finalWalkingSpeed;
 
             _playerRb.velocity = _velocityDirection * new Vector3(_inputDirection.x * resultDirectionSpeed,
                                      _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
-            _previousVelocity = _playerRb.velocity;
+        }
+
+        private void ApplyJump()
+        {
+            _playerRb.AddRelativeForce(0, _jumpPower, 0, ForceMode.VelocityChange);
         }
 
         // Update is called once per frame
@@ -89,10 +114,27 @@ namespace Player
             float mouseInputY = !_invertMouseY ? -Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y");
 
             _playerCamera.transform.Rotate(mouseInputY * _mouseSensitivity, 0, 0);
+
+            var angles = _playerCamera.transform.localRotation.eulerAngles;
+
+            float target = _playerCamera.transform.eulerAngles.x;
+
+            if (target > 180)
+            {
+                target -= 360;
+            }
+
+            angles.x = Mathf.Clamp(target, -_cameraVerticalAngleLimit, _cameraVerticalAngleLimit);
+
+            _playerCamera.transform.localRotation = Quaternion.Euler(angles);
+
             transform.Rotate(0, mouseInputX * _mouseSensitivity, 0);
 
+            _isAiming = Input.GetKey(_aimButton);
+            _isShooting = Input.GetKey(_fireButton);
 
-            if (_controllerState != PlayerControllerState.OnGround && _controllerState != PlayerControllerState.OnGroundSprinting) return;
+            if (_controllerMovementState != PlayerControllerMovementState.OnGround &&
+                _controllerMovementState != PlayerControllerMovementState.OnGroundSprinting) return;
 
             _velocityDirection = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
@@ -122,24 +164,24 @@ namespace Player
                 _inputDirection.x = 0;
             }
 
-            _controllerState = Input.GetKey(_sprintKey)
-                ? PlayerControllerState.OnGroundSprinting
-                : PlayerControllerState.OnGround;
+            _controllerMovementState = Input.GetKey(_sprintKey)
+                ? PlayerControllerMovementState.OnGroundSprinting
+                : PlayerControllerMovementState.OnGround;
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _controllerState = _controllerState == PlayerControllerState.OnGroundSprinting
-                    ? PlayerControllerState.SprintJumping
-                    : PlayerControllerState.Jumping;
+                _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.OnGroundSprinting
+                    ? PlayerControllerMovementState.SprintJumping
+                    : PlayerControllerMovementState.Jumping;
             }
         }
 
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Floor"))
-                _controllerState = _controllerState == PlayerControllerState.SprintJumpApplied
-                    ? PlayerControllerState.OnGroundSprinting
-                    : PlayerControllerState.OnGround;
+                _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied
+                    ? PlayerControllerMovementState.OnGroundSprinting
+                    : PlayerControllerMovementState.OnGround;
         }
     }
 }
