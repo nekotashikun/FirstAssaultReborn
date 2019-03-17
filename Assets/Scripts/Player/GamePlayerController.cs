@@ -39,27 +39,37 @@ namespace Player
         private KeyCode _rightKey = KeyCode.D;
 
         [SerializeField]
+        private KeyCode _crouchKey = KeyCode.C;
+
+        [SerializeField]
         private KeyCode _sprintKey = KeyCode.LeftShift;
-
-        [SerializeField]
-        private float _mouseSensitivity = 1;
-
-        [SerializeField]
-        private bool _invertMouseY;
-
+        
         [SerializeField]
         private KeyCode _aimButton = KeyCode.Mouse1;
 
         [SerializeField]
         private KeyCode _fireButton = KeyCode.Mouse0;
 
+        [SerializeField]
+        private float _mouseSensitivity = 1;
+
+        [SerializeField]
+        private float _cameraCrouchOffsetDistance = 0.5f;
+
+        [SerializeField]
+        private bool _invertMouseY;
 
         private PlayerControllerMovementState _controllerMovementState;
         private Vector3 _inputDirection;
         private Quaternion _velocityDirection;
         private bool _isShooting;
         private bool _isAiming;
+        private Vector3 _startingCameraPos;
 
+        private void Start()
+        {
+            _startingCameraPos = _playerCamera.transform.localPosition;
+        }
 
         private void FixedUpdate()
         {
@@ -110,6 +120,15 @@ namespace Player
         // Update is called once per frame
         private void Update()
         {
+            if (Input.GetKey(_crouchKey))
+            {
+                _playerCamera.transform.localPosition = new Vector3(_playerCamera.transform.localPosition.x, _startingCameraPos.y - _cameraCrouchOffsetDistance, _playerCamera.transform.localPosition.z);
+            }
+            else
+            {
+                _playerCamera.transform.localPosition = _startingCameraPos;
+            }
+            
             float mouseInputX = Input.GetAxis("Mouse X");
             float mouseInputY = !_invertMouseY ? -Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y");
 
