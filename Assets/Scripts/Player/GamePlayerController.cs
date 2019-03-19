@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using Weapons;
 
 namespace Player
@@ -43,7 +45,7 @@ namespace Player
 
         [SerializeField]
         private KeyCode _sprintKey = KeyCode.LeftShift;
-        
+
         [SerializeField]
         private KeyCode _aimButton = KeyCode.Mouse1;
 
@@ -65,6 +67,7 @@ namespace Player
         private bool _isShooting;
         private bool _isAiming;
         private Vector3 _startingCameraPos;
+        private Vector3 _directionVector;
 
         private void Start()
         {
@@ -74,7 +77,7 @@ namespace Player
         private void FixedUpdate()
         {
             _weapon.ShouldAim = _isAiming;
-            
+
             if (_isShooting)
             {
                 _weapon.Fire();
@@ -98,22 +101,50 @@ namespace Player
                     break;
             }
 
+            bool isInGroundState = _controllerMovementState == PlayerControllerMovementState.OnGround ||
+                                   _controllerMovementState == PlayerControllerMovementState.OnGroundSprinting;
+
 
             if (_inputDirection == Vector3.zero)
             {
-                _playerRb.velocity = new Vector3(0, _playerRb.velocity.y, 0);
+                if (isInGroundState && _controllerMovementState != PlayerControllerMovementState.JumpApplied && _controllerMovementState != PlayerControllerMovementState.SprintJumpApplied)
+                {
+                    _playerRb.isKinematic = true;
+                }
                 return;
             }
 
-            float resultDirectionSpeed =
-                (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * finalWalkingSpeed;
+            VerifyKinematicState();
 
-            _playerRb.velocity = _velocityDirection * new Vector3(_inputDirection.x * resultDirectionSpeed,
-                                     _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed);
+//            float resultDirectionSpeed =
+//                (1 / (Mathf.Abs(_inputDirection.x) + Mathf.Abs(_inputDirection.z))) * finalWalkingSpeed;
+
+            if (isInGroundState)
+            {
+                _directionVector = (_playerRb.transform.right * _inputDirection.x) +
+                                   (_playerRb.transform.forward * _inputDirection.z);
+            }
+
+            Debug.Log(_directionVector);
+
+            _playerRb.MovePosition(_playerRb.position + (_directionVector * finalWalkingSpeed) * Time.deltaTime);
+
+
+//            _playerRb.MovePosition((_playerRb.position + (_playerRb.transform.forward * new Vector3(_inputDirection.x * resultDirectionSpeed,
+//                                     _playerRb.velocity.y, _inputDirection.z * resultDirectionSpeed) * Time.fixedDeltaTime)));
+        }
+
+        private void VerifyKinematicState()
+        {
+            if (_playerRb.isKinematic)
+            {
+                _playerRb.isKinematic = false;
+            }
         }
 
         private void ApplyJump()
         {
+            VerifyKinematicState();
             _playerRb.AddRelativeForce(0, _jumpPower, 0, ForceMode.VelocityChange);
         }
 
@@ -122,17 +153,18 @@ namespace Player
         {
             if (Input.GetKey(_crouchKey))
             {
-                _playerCamera.transform.localPosition = new Vector3(_playerCamera.transform.localPosition.x, _startingCameraPos.y - _cameraCrouchOffsetDistance, _playerCamera.transform.localPosition.z);
+                _playerCamera.transform.localPosition = new Vector3(_playerCamera.transform.localPosition.x,
+                    _startingCameraPos.y - _cameraCrouchOffsetDistance, _playerCamera.transform.localPosition.z);
             }
             else
             {
                 _playerCamera.transform.localPosition = _startingCameraPos;
             }
-            
+
             float mouseInputX = Input.GetAxis("Mouse X");
             float mouseInputY = !_invertMouseY ? -Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y");
 
-            _playerCamera.transform.Rotate(mouseInputY * _mouseSensitivity, 0, 0);
+            _playerRb.MoveRotation(_playerRb.rotation * Quaternion.Euler(0, mouseInputY * _mouseSensitivity, 0));
 
             var angles = _playerCamera.transform.localRotation.eulerAngles;
 
@@ -197,10 +229,11 @@ namespace Player
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.CompareTag("Floor"))
-                _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied
-                    ? PlayerControllerMovementState.OnGroundSprinting
-                    : PlayerControllerMovementState.OnGround;
+            if (!other.gameObject.CompareTag("Floor")) return;
+            
+            _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied
+                ? PlayerControllerMovementState.OnGroundSprinting
+                : PlayerControllerMovementState.OnGround;
         }
     }
 }
