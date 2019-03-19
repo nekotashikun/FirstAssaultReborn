@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities.MessageBroker;
@@ -10,19 +8,17 @@ namespace Menu
     {
         [Header("UI Prefabs"), SerializeField]
         private GameObject _pausePanel;
-        [SerializeField]
+        [Header("Canvas Assignment"),SerializeField]
         private GameObject _mainCanvas;
 
         private GameMessenger _messenger;
         private MenuMessage _message;
-        //private GameObject _mainCanvas;
 
         void Start()
         {
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
             _message.MenuState = MenuType.HUD;
-            Debug.Log(_mainCanvas.name);
         }
 
         void Update()

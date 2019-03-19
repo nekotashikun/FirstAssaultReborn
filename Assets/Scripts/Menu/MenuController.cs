@@ -19,22 +19,16 @@ namespace Menu
         {
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
-            _message.MenuState = MenuType.NONE;
+            _message.MenuState = MenuType.MAIN;
             _mainCanvas = GameObject.Find("Canvas");
 
-            if (SceneManager.GetActiveScene().name == "MultiplayerMenu")
-                EnterMainMenu();
-                
+            EnterMainMenu();
         }
 
         private void HandleMessage(MenuMessage incomingMessage)
         {
             switch (incomingMessage.MenuState)
             {
-                case MenuType.NONE:
-                    {
-                        break;
-                    }
                 case MenuType.MAIN:
                     {
                         Instantiate(_mainMenuPanel, _mainCanvas.transform, false);

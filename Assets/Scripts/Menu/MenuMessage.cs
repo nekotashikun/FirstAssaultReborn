@@ -9,7 +9,6 @@ namespace Menu
 
     public enum MenuType
     {
-        NONE,
         MAIN,
         OPTIONS,
         PAUSE,

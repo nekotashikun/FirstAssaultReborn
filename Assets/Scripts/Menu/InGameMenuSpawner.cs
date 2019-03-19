@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 namespace Menu
 {
-    public class MenuControllerSpawner : MonoBehaviour
+    public class InGameMenuSpawner : MonoBehaviour
     {
         [Header("Required Objects"), SerializeField]
         private GameObject _menuGameObject;
@@ -14,7 +11,6 @@ namespace Menu
         [SerializeField]
         private GameObject _eventSystemPrefab;
 
-    // Start is called before the first frame update
     void Start()
         {
             if (_menuGameObject.GetComponents<InGameMenuController>().Length == 0)
@@ -22,8 +18,6 @@ namespace Menu
                 Instantiate(_menuControllerPrefab);
                 Instantiate(_eventSystemPrefab);
             }
-                
         }
-
     }
 }
