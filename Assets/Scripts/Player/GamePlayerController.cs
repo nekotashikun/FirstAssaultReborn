@@ -89,6 +89,7 @@ namespace Player
         {
             Cursor.lockState = CursorLockMode.Locked;
             _startingCameraPos = _playerCamera.transform.localPosition;
+            _playerRb.useGravity = false;
         }
 
         private void FixedUpdate()
