@@ -131,8 +131,6 @@ namespace Player
                                    (_playerRb.transform.forward * _inputDirection.z);
             }
 
-            Debug.Log(_directionVector);
-
             _playerRb.MovePosition(_playerRb.position + (_directionVector * finalWalkingSpeed) * Time.deltaTime);
         }
 
