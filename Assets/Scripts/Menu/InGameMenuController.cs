@@ -1,34 +1,40 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 using Utilities.MessageBroker;
 
 namespace Menu
 {
     public class InGameMenuController : MonoBehaviour
-    {
-        [Header("UI Prefabs"), SerializeField]
-        private GameObject _pausePanel;
+   {
+        private static InGameMenuController _instance;
+
+        public static InGameMenuController Instance { get { return _instance; } }
+
+        [Header("Required Prefabs"), SerializeField]
+        private GameObject _pausePanelPrefab;
         [Header("Canvas Assignment"),SerializeField]
         private GameObject _mainCanvas;
 
         private GameMessenger _messenger;
-        private MenuMessage _message;
+        private MenuType _state;
 
         void Start()
         {
+            if (_instance != null && _instance != this)
+                Destroy(gameObject);
+            else
+                _instance = this;
+
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
-            _message.MenuState = MenuType.HUD;
         }
 
         void Update()
         {
-            if (Input.GetKeyUp(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) && _state != MenuType.PAUSE)
             {
-                if (_message.MenuState != MenuType.PAUSE)
-                {
-                    OpenPauseMenu();
-                }
+                SendMessage(MenuType.PAUSE);
             }
         }
 
@@ -36,24 +42,16 @@ namespace Menu
         {
             switch (incomingMessage.MenuState)
             {
-                case MenuType.HUD:
-                    {
-                        break;
-                    }
                 case MenuType.PAUSE:
                     {
-                        Instantiate(_pausePanel, _mainCanvas.transform, false);
-                        _pausePanel.SetActive(true);
-                        break;
-                    }
-                case MenuType.EXIT:
-                    {
-                        SceneManager.LoadScene(0);
+                        Instantiate(_pausePanelPrefab, _mainCanvas.transform, false);
+                        _pausePanelPrefab.SetActive(true);
+                        _state = MenuType.PAUSE;
                         break;
                     }
                 default:
                     {
-                        Debug.Log("Invalid Menu Request");
+                        _state = MenuType.GAME;
                         break;
                     }
             }
@@ -62,13 +60,13 @@ namespace Menu
         public void SendMessage(MenuType nextMenu)
         {
             Debug.Log("Sending Menu Message: " + nextMenu.ToString());
-            _message.MenuState = nextMenu;
-            _messenger.SendMessageOfType<MenuMessage>(_message);
+            var _message = new MenuMessage(nextMenu);
+            _messenger.SendMessageOfType(_message);
         }
 
-        public void OpenPauseMenu()
+        public void Exit()
         {
-            SendMessage(MenuType.PAUSE);
+            SceneManager.LoadScene("MainMenu");
         }
 
         public void OnDestroy()

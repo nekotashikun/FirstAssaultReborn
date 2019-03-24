@@ -6,21 +6,28 @@ namespace Menu
 {
     public class MenuController : MonoBehaviour
     {
-        [Header("UI Prefabs"), SerializeField]
-        private GameObject _optionsPanel;
+        private static MenuController _instance;
+
+        public static MenuController Instance { get { return _instance; } }
+        
+        [Header("Required Game Objects"), SerializeField]
+        private GameObject _optionsPanelPrefab;
         [SerializeField]
-        private GameObject _mainMenuPanel;
+        private GameObject _mainMenuPanelPrefab;
+        [SerializeField]
+        private GameObject _mainCanvas;
 
         private GameMessenger _messenger;
-        private MenuMessage _message;
-        private GameObject _mainCanvas;
       
         void Start()
         {
+            if (_instance != null && _instance != this)
+                Destroy(gameObject);
+            else
+                _instance = this;
+
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
-            _message.MenuState = MenuType.MAIN;
-            _mainCanvas = GameObject.Find("Canvas");
 
             EnterMainMenu();
         }
@@ -31,14 +38,14 @@ namespace Menu
             {
                 case MenuType.MAIN:
                     {
-                        Instantiate(_mainMenuPanel, _mainCanvas.transform, false);
-                        _mainMenuPanel.SetActive(true);
+                        Instantiate(_mainMenuPanelPrefab, _mainCanvas.transform, false);
+                        _mainMenuPanelPrefab.SetActive(true);
                         break;
                     }
                 case MenuType.OPTIONS:
                     {
-                        Instantiate(_optionsPanel, _mainCanvas.transform, false);
-                        _optionsPanel.SetActive(true);
+                        Instantiate(_optionsPanelPrefab, _mainCanvas.transform, false);
+                        _optionsPanelPrefab.SetActive(true);
                         break;
                     }
                 default:
@@ -52,8 +59,8 @@ namespace Menu
         public void SendMessage(MenuType nextMenu)
         {
             Debug.Log("Sending Menu Message: " + nextMenu.ToString());
-            _message.MenuState = nextMenu;
-            _messenger.SendMessageOfType<MenuMessage>(_message);
+            var _message = new MenuMessage(nextMenu);
+            _messenger.SendMessageOfType(_message);
         }
 
         public void EnterOptionsMenu()

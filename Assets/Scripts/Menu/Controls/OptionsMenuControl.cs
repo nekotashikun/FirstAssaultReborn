@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Menu.Control
+namespace Menu.Controls
 {
     public class OptionsMenuControl : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace Menu.Control
 
         void Start()
         {
-            _menuController = GetComponentInParent<MenuController>();
+            _menuController = MenuController.Instance;
             _backButton.onClick.AddListener(SendMainMenuMessage);
         }
 
@@ -27,7 +27,7 @@ namespace Menu.Control
 
         public void DestroyOptionsMenu()
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

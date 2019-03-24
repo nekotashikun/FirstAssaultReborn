@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Menu.Control
+namespace Menu.Controls
 {
     public class MainMenuControl : MonoBehaviour
     {
         [Header("Buttons"), SerializeField]
         private Button _optionsButton;
-       
+
         private MenuController _menuController;
 
         void Start()
         {
-            _menuController = GetComponentInParent<MenuController>();
+            _menuController = MenuController.Instance;
             _optionsButton.onClick.AddListener(GoToOptions);
         }
 
@@ -26,7 +26,7 @@ namespace Menu.Control
 
         public void DestroyMainMenu()
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
 
     }

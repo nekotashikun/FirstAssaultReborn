@@ -4,15 +4,13 @@ namespace Menu
 {
     public struct MenuMessage
     {
-        public MenuType MenuState { get; set; }
-    }
+        private readonly MenuType _menuState;
 
-    public enum MenuType
-    {
-        MAIN,
-        OPTIONS,
-        PAUSE,
-        HUD,
-        EXIT
+        public MenuMessage(MenuType desiredState)
+        {
+            _menuState = desiredState;
+        }
+
+        public MenuType MenuState { get { return _menuState; } }
     }
 }
