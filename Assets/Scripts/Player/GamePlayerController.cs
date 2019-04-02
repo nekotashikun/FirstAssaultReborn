@@ -84,12 +84,14 @@ namespace Player
         private bool _isAiming;
         private Vector3 _startingCameraPos;
         private Vector3 _directionVector;
+        private List<GameObject> _touchedFloorObjects;
 
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
             _startingCameraPos = _playerCamera.transform.localPosition;
             _playerRb.useGravity = false;
+            _touchedFloorObjects = new List<GameObject>();
         }
 
         private void FixedUpdate()
@@ -136,13 +138,13 @@ namespace Player
 
         private void ApplyJump()
         {
-            StartCoroutine(HandleJumpArc());
+            StartCoroutine(HandleJumpArc(false));
         }
 
-        private IEnumerator HandleJumpArc()
+        private IEnumerator HandleJumpArc(bool shouldJustFall)
         {
             float fallingVelocityAbsolute = 0;
-            float jumpVelocityAbsolute = _jumpPower;
+            float jumpVelocityAbsolute = shouldJustFall? 0 : _jumpPower;
             while (_controllerMovementState == PlayerControllerMovementState.JumpApplied || _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied)
             {
 
@@ -296,10 +298,41 @@ namespace Player
         private void OnCollisionEnter(Collision other)
         {
             if (!other.gameObject.CompareTag("Floor")) return;
+            int originalCount = _touchedFloorObjects.Count;
+            
+            _touchedFloorObjects.Add(other.gameObject);
 
+            if (originalCount != 0) return;
+            
+            HandleTouchingGround(other);
+        }
+
+        private void OnCollisionExit(Collision other)
+        {
+            if (!other.gameObject.CompareTag("Floor")) return;
+            
+            _touchedFloorObjects.Remove(other.gameObject);
+
+            if (_touchedFloorObjects.Count > 0) return;
+            
+            HandleLeavingGround(other);
+        }
+        
+        private void HandleTouchingGround(Collision other)
+        {
             _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied
                 ? PlayerControllerMovementState.OnGroundSprinting
                 : PlayerControllerMovementState.OnGround;
+        }
+
+        private void HandleLeavingGround(Collision other)
+        {
+            if (_controllerMovementState != PlayerControllerMovementState.OnGround && _controllerMovementState != PlayerControllerMovementState.OnGroundSprinting) return;
+
+            _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.OnGroundSprinting
+                ? PlayerControllerMovementState.SprintJumpApplied
+                : PlayerControllerMovementState.JumpApplied;
+            StartCoroutine(HandleJumpArc(true));
         }
     }
 }
