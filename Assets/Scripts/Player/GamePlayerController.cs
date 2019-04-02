@@ -18,8 +18,35 @@ namespace Player
         [SerializeField]
         private BaseWeaponBehaviour _weapon;
 
+        [Header("Optional Dependencies"), SerializeField]
+        private Animator _animator;
+
         [Header("Player Config"), SerializeField]
         private float _walkingSpeed = 5f;
+
+        [SerializeField]
+        private string _idleAnimParameter = string.Empty;
+
+        [SerializeField]
+        private string _walkAnimParameter = string.Empty;
+
+        [SerializeField]
+        private string _sprintAnimParameter = string.Empty;
+
+        [SerializeField]
+        private string _crouchAnimParameter = string.Empty;
+
+        [SerializeField]
+        private string _crouchWalkAnimParameter = string.Empty;
+
+        [SerializeField]
+        private string _jumpAnimParameter = string.Empty;
+
+        [SerializeField]
+        private string _midAirParameter = string.Empty;
+
+        [SerializeField]
+        private string _landAnimParameter = string.Empty;
 
         [SerializeField]
         private float _jumpPower = 5f;
@@ -27,7 +54,7 @@ namespace Player
         [SerializeField]
         private float _jumpSnapDistance = 0.5f;
 
-        [FormerlySerializedAs("_gravityAcceleration"),SerializeField]
+        [FormerlySerializedAs("_gravityAcceleration"), SerializeField]
         private float _gravityValue = 9.81f;
 
         [SerializeField]
@@ -38,6 +65,9 @@ namespace Player
 
         [SerializeField]
         private float _cameraVerticalAngleLimit = 70f;
+
+        [SerializeField]
+        private float _aimCrouchMovementSpeedDivider = 2;
 
         [Header("Control Settings"), SerializeField]
         private KeyCode _forwardKey = KeyCode.W;
@@ -85,6 +115,7 @@ namespace Player
         private Vector3 _startingCameraPos;
         private Vector3 _directionVector;
         private List<GameObject> _touchedFloorObjects;
+        private bool _isCrouching;
 
         private void Start()
         {
@@ -98,31 +129,94 @@ namespace Player
         {
             _weapon.ShouldAim = _isAiming;
 
-            if (_isShooting)
+            if (_isShooting && _controllerMovementState != PlayerControllerMovementState.Sprinting)
             {
                 _weapon.Fire();
             }
 
-            float finalWalkingSpeed = _walkingSpeed;
+            float finalWalkingSpeed;
+
+            if (_isAiming || _isCrouching)
+            {
+                finalWalkingSpeed = _walkingSpeed / _aimCrouchMovementSpeedDivider;
+            }
+            else
+            {
+                finalWalkingSpeed = _walkingSpeed;
+            }
+
+            bool shouldIgnoreSprintMultiplierPrevention = false;
 
             switch (_controllerMovementState)
             {
+                case PlayerControllerMovementState.OnGround:
+                    if (_animator == null) break;
+
+                    _animator.SetBool(_walkAnimParameter, false);
+                    _animator.SetBool(_sprintAnimParameter, false);
+                    _animator.SetBool(_jumpAnimParameter, false);
+                    _animator.SetBool(_midAirParameter, false);
+                    _animator.SetBool(_landAnimParameter, false);
+                    _animator.SetBool(_crouchWalkAnimParameter, false);
+                    _animator.SetBool(_isCrouching ? _crouchAnimParameter : _idleAnimParameter,
+                        !_isAiming && !_isShooting);
+                    break;
+                case PlayerControllerMovementState.Walking:
+                    if (_animator == null) break;
+
+                    _animator.SetBool(_idleAnimParameter, false);
+                    _animator.SetBool(_sprintAnimParameter, false);
+                    _animator.SetBool(_isCrouching ? _crouchWalkAnimParameter : _walkAnimParameter,
+                        !_isAiming && !_isShooting);
+                    break;
                 case PlayerControllerMovementState.SprintJumpApplied:
-                case PlayerControllerMovementState.OnGroundSprinting:
+                    if (_animator == null) goto case PlayerControllerMovementState.Sprinting;
+
+                    _animator.SetBool(_jumpAnimParameter, false);
+                    _animator.SetBool(_walkAnimParameter, false);
+                    _animator.SetBool(_sprintAnimParameter, false);
+                    _animator.SetBool(_idleAnimParameter, false);
+                    _animator.SetBool(_crouchAnimParameter, false);
+                    _animator.SetBool(_crouchWalkAnimParameter, false);
+                    _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting);
+                    goto case PlayerControllerMovementState.Sprinting;
+                case PlayerControllerMovementState.Sprinting:
+                    if (_animator != null)
+                    {
+                        _animator.SetBool(_idleAnimParameter, false);
+                        _animator.SetBool(_walkAnimParameter, false);
+                        _animator.SetBool(_crouchWalkAnimParameter, false);
+                        _animator.SetBool(_crouchAnimParameter, false);
+                        _animator.SetBool(_sprintAnimParameter, !_isAiming && !_isShooting);
+                    }
+
+                    if (_isAiming || _isShooting) break;
                     finalWalkingSpeed *= _sprintMultiplier;
                     break;
                 case PlayerControllerMovementState.Jumping:
                     _controllerMovementState = PlayerControllerMovementState.JumpApplied;
-                    ApplyJump();
+                    HandleMandatoryJumpingLogic();
                     break;
                 case PlayerControllerMovementState.SprintJumping:
                     _controllerMovementState = PlayerControllerMovementState.SprintJumpApplied;
-                    ApplyJump();
+                    HandleMandatoryJumpingLogic();
+                    break;
+                case PlayerControllerMovementState.JumpApplied:
+                    if (_animator == null) break;
+
+                    _animator.SetBool(_jumpAnimParameter, false);
+                    _animator.SetBool(_walkAnimParameter, false);
+                    _animator.SetBool(_sprintAnimParameter, false);
+                    _animator.SetBool(_idleAnimParameter, false);
+                    _animator.SetBool(_crouchAnimParameter, false);
+                    _animator.SetBool(_crouchWalkAnimParameter, false);
+                    _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting);
                     break;
             }
 
             bool isInGroundState = _controllerMovementState == PlayerControllerMovementState.OnGround ||
-                                   _controllerMovementState == PlayerControllerMovementState.OnGroundSprinting;
+                                   _controllerMovementState == PlayerControllerMovementState.Sprinting ||
+                                   _controllerMovementState == PlayerControllerMovementState.Walking;
 
 
             if (_inputDirection == Vector3.zero) return;
@@ -136,6 +230,16 @@ namespace Player
             _playerRb.MovePosition(_playerRb.position + (_directionVector * finalWalkingSpeed) * Time.deltaTime);
         }
 
+        private void HandleMandatoryJumpingLogic()
+        {
+            ApplyJump();
+            if (_animator == null) return;
+            _animator.SetBool(_idleAnimParameter, false);
+            _animator.SetBool(_walkAnimParameter, false);
+            _animator.SetBool(_sprintAnimParameter, false);
+            _animator.SetBool(_jumpAnimParameter, !_isAiming && !_isShooting);
+        }
+
         private void ApplyJump()
         {
             StartCoroutine(HandleJumpArc(false));
@@ -144,10 +248,10 @@ namespace Player
         private IEnumerator HandleJumpArc(bool shouldJustFall)
         {
             float fallingVelocityAbsolute = 0;
-            float jumpVelocityAbsolute = shouldJustFall? 0 : _jumpPower;
-            while (_controllerMovementState == PlayerControllerMovementState.JumpApplied || _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied)
+            float jumpVelocityAbsolute = shouldJustFall ? 0 : _jumpPower;
+            while (_controllerMovementState == PlayerControllerMovementState.JumpApplied ||
+                   _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied)
             {
-
                 if (jumpVelocityAbsolute > 0)
                 {
                     if (jumpVelocityAbsolute < _jumpSnapDistance)
@@ -158,7 +262,9 @@ namespace Player
                     {
                         jumpVelocityAbsolute -= _gravityValue * Time.fixedDeltaTime;
                     }
-                    _playerRb.MovePosition(new Vector3(_playerRb.position.x, _playerRb.position.y + (jumpVelocityAbsolute * Time.fixedDeltaTime), _playerRb.position.z));
+
+                    _playerRb.MovePosition(new Vector3(_playerRb.position.x,
+                        _playerRb.position.y + (jumpVelocityAbsolute * Time.fixedDeltaTime), _playerRb.position.z));
                 }
                 else
                 {
@@ -170,8 +276,11 @@ namespace Player
                     {
                         fallingVelocityAbsolute = _maxGravityDescentSpeed;
                     }
-                    _playerRb.MovePosition(new Vector3(_playerRb.position.x, _playerRb.position.y - fallingVelocityAbsolute * Time.fixedDeltaTime, _playerRb.position.z));
+
+                    _playerRb.MovePosition(new Vector3(_playerRb.position.x,
+                        _playerRb.position.y - fallingVelocityAbsolute * Time.fixedDeltaTime, _playerRb.position.z));
                 }
+
                 yield return new WaitForFixedUpdate();
             }
         }
@@ -179,7 +288,7 @@ namespace Player
         private void Update()
         {
             HandleCursorLockState();
-            
+
             HandleCrouchInput();
 
             HandleCameraInput();
@@ -187,7 +296,8 @@ namespace Player
             HandleGunInput();
 
             if (_controllerMovementState != PlayerControllerMovementState.OnGround &&
-                _controllerMovementState != PlayerControllerMovementState.OnGroundSprinting) return;
+                _controllerMovementState != PlayerControllerMovementState.Sprinting &&
+                _controllerMovementState != PlayerControllerMovementState.Walking) return;
 
             HandleMovementInput();
 
@@ -211,17 +321,18 @@ namespace Player
         private void HandleJumpingInput()
         {
             if (!Input.GetKeyDown(KeyCode.Space)) return;
-            
-            _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.OnGroundSprinting
+
+            _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.Sprinting
                 ? PlayerControllerMovementState.SprintJumping
                 : PlayerControllerMovementState.Jumping;
         }
 
         private void HandleSprintingInput()
         {
-            _controllerMovementState = Input.GetKey(_sprintKey)
-                ? PlayerControllerMovementState.OnGroundSprinting
-                : PlayerControllerMovementState.OnGround;
+            if (Input.GetKey(_sprintKey))
+            {
+                _controllerMovementState = PlayerControllerMovementState.Sprinting;
+            }
         }
 
         private void HandleMovementInput()
@@ -251,6 +362,10 @@ namespace Player
             {
                 _inputDirection.x = 0;
             }
+
+            if (_inputDirection == Vector3.zero) return;
+
+            _controllerMovementState = PlayerControllerMovementState.Walking;
         }
 
         private void HandleGunInput()
@@ -284,7 +399,8 @@ namespace Player
 
         private void HandleCrouchInput()
         {
-            if (Input.GetKey(_crouchKey))
+            _isCrouching = Input.GetKey(_crouchKey);
+            if (_isCrouching)
             {
                 _playerCamera.transform.localPosition = new Vector3(_playerCamera.transform.localPosition.x,
                     _startingCameraPos.y - _cameraCrouchOffsetDistance, _playerCamera.transform.localPosition.z);
@@ -299,37 +415,39 @@ namespace Player
         {
             if (!other.gameObject.CompareTag("Floor")) return;
             int originalCount = _touchedFloorObjects.Count;
-            
+
             _touchedFloorObjects.Add(other.gameObject);
 
             if (originalCount != 0) return;
-            
+
             HandleTouchingGround(other);
         }
 
         private void OnCollisionExit(Collision other)
         {
             if (!other.gameObject.CompareTag("Floor")) return;
-            
+
             _touchedFloorObjects.Remove(other.gameObject);
 
             if (_touchedFloorObjects.Count > 0) return;
-            
+
             HandleLeavingGround(other);
         }
-        
+
         private void HandleTouchingGround(Collision other)
         {
             _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.SprintJumpApplied
-                ? PlayerControllerMovementState.OnGroundSprinting
+                ? PlayerControllerMovementState.Sprinting
                 : PlayerControllerMovementState.OnGround;
         }
 
         private void HandleLeavingGround(Collision other)
         {
-            if (_controllerMovementState != PlayerControllerMovementState.OnGround && _controllerMovementState != PlayerControllerMovementState.OnGroundSprinting) return;
+            if (_controllerMovementState != PlayerControllerMovementState.OnGround &&
+                _controllerMovementState != PlayerControllerMovementState.Sprinting &&
+                _controllerMovementState != PlayerControllerMovementState.Walking) return;
 
-            _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.OnGroundSprinting
+            _controllerMovementState = _controllerMovementState == PlayerControllerMovementState.Sprinting
                 ? PlayerControllerMovementState.SprintJumpApplied
                 : PlayerControllerMovementState.JumpApplied;
             StartCoroutine(HandleJumpArc(true));
