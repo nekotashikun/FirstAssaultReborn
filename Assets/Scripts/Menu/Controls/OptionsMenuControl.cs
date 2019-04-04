@@ -1,33 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Menu.Controls
 {
     public class OptionsMenuControl : MonoBehaviour
     {
-        [Header("Buttons"), SerializeField]
-        private Button _backButton;
-
+        [Header("Controller"), SerializeField]
         private MenuController _menuController;
+
+        private string _currentScene;
 
         void Start()
         {
-            _menuController = MenuController.Instance;
-            _backButton.onClick.AddListener(SendMainMenuMessage);
+            _currentScene = _menuController.GetCurrentSceneName();
         }
 
-        public void SendMainMenuMessage()
+        public void EnterPreviousMenu()
         {
-            Debug.Log("Going Back to Main Menu...");
-            _menuController.EnterMainMenu();
-            DestroyOptionsMenu();
+            _currentScene = _menuController.GetCurrentSceneName();
+
+            if (_currentScene != "MainMenu")
+                _menuController.SendMenuMessage(MenuType.PAUSE);
+            else
+                _menuController.SendMenuMessage(MenuType.MAIN);
         }
 
-        public void DestroyOptionsMenu()
-        {
-            Destroy(gameObject);
-        }
     }
 }

@@ -1,33 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using Menu;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Menu.Controls
+public class MainMenuControl : MonoBehaviour
 {
-    public class MainMenuControl : MonoBehaviour
+
+    [Header("Controller"), SerializeField]
+    private MenuController _menuController;
+
+    public void EnterConnectionMenu()
     {
-        [Header("Buttons"), SerializeField]
-        private Button _optionsButton;
-
-        private MenuController _menuController;
-
-        void Start()
-        {
-            _menuController = MenuController.Instance;
-            _optionsButton.onClick.AddListener(GoToOptions);
-        }
-
-        public void GoToOptions()
-        {
-            _menuController.EnterOptionsMenu();
-            DestroyMainMenu();
-        }
-
-        public void DestroyMainMenu()
-        {
-            Destroy(gameObject);
-        }
-
+        _menuController.SendMenuMessage(MenuType.CONNECT);
     }
+
 }

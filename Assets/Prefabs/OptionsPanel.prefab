@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 5382377220190294254}
   - component: {fileID: 2462852094584788631}
   - component: {fileID: 7210918779217798292}
-  - component: {fileID: 1349046192835593828}
+  - component: {fileID: 956988653060550189}
   m_Layer: 5
   m_Name: OptionsPanel
   m_TagString: Untagged
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1349046192835593828
+--- !u!114 &956988653060550189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc918c152f016794fb4f5048cf07b1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _backButton: {fileID: 9156849609851385196}
+  _menuController: {fileID: 0}
 --- !u!1 &5254068712199353858
 GameObject:
   m_ObjectHideFlags: 0

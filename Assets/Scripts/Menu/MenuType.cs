@@ -4,6 +4,7 @@ namespace Menu
     {
         MAIN,
         OPTIONS,
+        CONNECT,
         PAUSE,
         GAME
     }
