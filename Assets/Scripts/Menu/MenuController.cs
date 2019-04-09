@@ -22,7 +22,7 @@ namespace Menu
         private GameMessenger _messenger;
         private string _sceneName;
 
-        private List<GameObject> _menuPrefabs;
+        private GameObject[] _menuPrefabs;
       
         void Start()
         {
@@ -41,10 +41,8 @@ namespace Menu
             SceneManager.activeSceneChanged += ChangedScene;
             EditorSceneManager.activeSceneChanged += ChangedScene;
 
-            _menuPrefabs = new List<GameObject>();
-            if (_mainMenuPanelPrefab != null) _menuPrefabs.Add(_mainMenuPanelPrefab);
-            if (_pausePanelPrefab != null) _menuPrefabs.Add(_pausePanelPrefab);
-            if (_optionsPanelPrefab != null) _menuPrefabs.Add(_optionsPanelPrefab);
+            _menuPrefabs = new GameObject[] { _mainMenuPanelPrefab, _optionsPanelPrefab, _pausePanelPrefab };
+
         }
 
         void Update()
@@ -66,43 +64,51 @@ namespace Menu
             {
                 case MenuType.MAIN:
                     {
-                        DeactivatePrefabs();
-                        _mainMenuPanelPrefab.SetActive(true);
+                        ResetPrefabs(_menuPrefabs[0]);
                         break;
                     }
                 case MenuType.CONNECT:
                     {
-                        DeactivatePrefabs();
+                        ResetPrefabs();
                         SceneManager.LoadScene("MultiplayerMenu");
                         break;
                     }
                 case MenuType.OPTIONS:
                     {
-                        DeactivatePrefabs();
-                        _optionsPanelPrefab.SetActive(true);
+                        ResetPrefabs(_menuPrefabs[1]);
                         break;
                     }
                 case MenuType.PAUSE:
                     {
-                        DeactivatePrefabs();
-                        _pausePanelPrefab.SetActive(true);
+                        ResetPrefabs(_menuPrefabs[2]);
                         break;
                     }
                 default:
                     {
-                        DeactivatePrefabs();
+                        ResetPrefabs();
                         break;
                     }
             }
         }
 
-        private void DeactivatePrefabs()
+
+        private void ResetPrefabs(GameObject keepAlive)
         {
-            foreach (GameObject prefab in _menuPrefabs)
+            foreach (GameObject g in _menuPrefabs)
             {
-                if (prefab.activeSelf) prefab.SetActive(false);
+                if (g != keepAlive)
+                    g.SetActive(false);
+                else
+                    g.SetActive(true);
             }
         }
+
+        private void ResetPrefabs()
+        {
+            foreach (GameObject g in _menuPrefabs)
+                g.SetActive(false);
+        }
+
 
         private void ChangedScene(Scene current, Scene next)
         {
