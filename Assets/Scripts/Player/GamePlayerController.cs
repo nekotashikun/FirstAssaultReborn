@@ -123,6 +123,7 @@ namespace Player
             _startingCameraPos = _playerCamera.transform.localPosition;
             _playerRb.useGravity = false;
             _touchedFloorObjects = new List<GameObject>();
+            _playerRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         }
 
         private void FixedUpdate()
@@ -151,7 +152,6 @@ namespace Player
             {
                 case PlayerControllerMovementState.OnGround:
                     if (_animator == null) break;
-
                     _animator.SetBool(_walkAnimParameter, false);
                     _animator.SetBool(_sprintAnimParameter, false);
                     _animator.SetBool(_jumpAnimParameter, false);
@@ -163,7 +163,6 @@ namespace Player
                     break;
                 case PlayerControllerMovementState.Walking:
                     if (_animator == null) break;
-
                     _animator.SetBool(_idleAnimParameter, false);
                     _animator.SetBool(_sprintAnimParameter, false);
                     _animator.SetBool(_isCrouching ? _crouchWalkAnimParameter : _walkAnimParameter,
@@ -379,7 +378,7 @@ namespace Player
             float mouseInputX = Input.GetAxis("Mouse X");
             float mouseInputY = !_invertMouseY ? -Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y");
 
-            _playerRb.MoveRotation(_playerRb.rotation * Quaternion.Euler(0, mouseInputY * _mouseSensitivity, 0));
+            _playerRb.MoveRotation(_playerRb.rotation * Quaternion.Euler(0, mouseInputX * _mouseSensitivity, 0));
 
             var angles = _playerCamera.transform.localRotation.eulerAngles;
 
@@ -389,12 +388,12 @@ namespace Player
             {
                 target -= 360;
             }
+            
+            target += mouseInputY * _mouseSensitivity;
 
             angles.x = Mathf.Clamp(target, -_cameraVerticalAngleLimit, _cameraVerticalAngleLimit);
 
             _playerCamera.transform.localRotation = Quaternion.Euler(angles);
-
-            transform.Rotate(0, mouseInputX * _mouseSensitivity, 0);
         }
 
         private void HandleCrouchInput()
