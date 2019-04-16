@@ -25,9 +25,6 @@ namespace Player
         private float _walkingSpeed = 5f;
 
         [SerializeField]
-        private string _idleAnimParameter = string.Empty;
-
-        [SerializeField]
         private string _walkAnimParameter = string.Empty;
 
         [SerializeField]
@@ -158,34 +155,41 @@ namespace Player
                     _animator.SetBool(_midAirParameter, false);
                     _animator.SetBool(_landAnimParameter, false);
                     _animator.SetBool(_crouchWalkAnimParameter, false);
-                    _animator.SetBool(_isCrouching ? _crouchAnimParameter : _idleAnimParameter,
-                        !_isAiming && !_isShooting);
+                    _animator.SetBool(_crouchAnimParameter, !_isAiming && !_isShooting && _isCrouching);
                     break;
                 case PlayerControllerMovementState.Walking:
                     if (_animator == null) break;
-                    _animator.SetBool(_idleAnimParameter, false);
+                    _animator.SetBool(_walkAnimParameter, false);
                     _animator.SetBool(_sprintAnimParameter, false);
+                    _animator.SetBool(_jumpAnimParameter, false);
+                    _animator.SetBool(_midAirParameter, false);
+                    _animator.SetBool(_landAnimParameter, false);
+                    _animator.SetBool(_crouchWalkAnimParameter, false);
                     _animator.SetBool(_isCrouching ? _crouchWalkAnimParameter : _walkAnimParameter,
                         !_isAiming && !_isShooting);
                     break;
                 case PlayerControllerMovementState.SprintJumpApplied:
                     if (_animator == null) goto case PlayerControllerMovementState.Sprinting;
-
-                    _animator.SetBool(_jumpAnimParameter, false);
                     _animator.SetBool(_walkAnimParameter, false);
                     _animator.SetBool(_sprintAnimParameter, false);
-                    _animator.SetBool(_idleAnimParameter, false);
-                    _animator.SetBool(_crouchAnimParameter, false);
+                    _animator.SetBool(_jumpAnimParameter, false);
+                    _animator.SetBool(_midAirParameter, false);
+                    _animator.SetBool(_landAnimParameter, false);
                     _animator.SetBool(_crouchWalkAnimParameter, false);
                     _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting);
                     goto case PlayerControllerMovementState.Sprinting;
                 case PlayerControllerMovementState.Sprinting:
                     if (_animator != null)
                     {
-                        _animator.SetBool(_idleAnimParameter, false);
                         _animator.SetBool(_walkAnimParameter, false);
+                        _animator.SetBool(_sprintAnimParameter, false);
+                        _animator.SetBool(_jumpAnimParameter, false);
+                        if (_touchedFloorObjects.Count != 0)
+                        {
+                            _animator.SetBool(_midAirParameter, false);
+                        }
+                        _animator.SetBool(_landAnimParameter, false);
                         _animator.SetBool(_crouchWalkAnimParameter, false);
-                        _animator.SetBool(_crouchAnimParameter, false);
                         _animator.SetBool(_sprintAnimParameter, !_isAiming && !_isShooting);
                     }
 
@@ -203,11 +207,11 @@ namespace Player
                 case PlayerControllerMovementState.JumpApplied:
                     if (_animator == null) break;
 
-                    _animator.SetBool(_jumpAnimParameter, false);
                     _animator.SetBool(_walkAnimParameter, false);
                     _animator.SetBool(_sprintAnimParameter, false);
-                    _animator.SetBool(_idleAnimParameter, false);
-                    _animator.SetBool(_crouchAnimParameter, false);
+                    _animator.SetBool(_jumpAnimParameter, false);
+                    _animator.SetBool(_midAirParameter, false);
+                    _animator.SetBool(_landAnimParameter, false);
                     _animator.SetBool(_crouchWalkAnimParameter, false);
                     _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting);
                     break;
@@ -233,9 +237,12 @@ namespace Player
         {
             ApplyJump();
             if (_animator == null) return;
-            _animator.SetBool(_idleAnimParameter, false);
             _animator.SetBool(_walkAnimParameter, false);
             _animator.SetBool(_sprintAnimParameter, false);
+            _animator.SetBool(_jumpAnimParameter, false);
+            _animator.SetBool(_midAirParameter, false);
+            _animator.SetBool(_landAnimParameter, false);
+            _animator.SetBool(_crouchWalkAnimParameter, false);
             _animator.SetBool(_jumpAnimParameter, !_isAiming && !_isShooting);
         }
 
@@ -362,7 +369,11 @@ namespace Player
                 _inputDirection.x = 0;
             }
 
-            if (_inputDirection == Vector3.zero) return;
+            if (_inputDirection == Vector3.zero)
+            {
+                _controllerMovementState = PlayerControllerMovementState.OnGround;
+                return;
+            }
 
             _controllerMovementState = PlayerControllerMovementState.Walking;
         }
