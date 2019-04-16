@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 1751971799}
   - component: {fileID: 1751971798}
   - component: {fileID: 1751971797}
+  - component: {fileID: 1751971803}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -528,13 +529,22 @@ MonoBehaviour:
   _playerRb: {fileID: 1751971798}
   _playerCamera: {fileID: 565138274}
   _weapon: {fileID: 818148595}
+  _animator: {fileID: 1751971803}
   _walkingSpeed: 5
+  _walkAnimParameter: walking
+  _sprintAnimParameter: running
+  _crouchAnimParameter: crouching
+  _crouchWalkAnimParameter: crouch walking
+  _jumpAnimParameter: jumping
+  _midAirParameter: midair
+  _landAnimParameter: landing
   _jumpPower: 5
   _jumpSnapDistance: 0.5
   _gravityValue: 9.81
   _maxGravityDescentSpeed: 53
   _sprintMultiplier: 1.5
   _cameraVerticalAngleLimit: 70
+  _aimCrouchMovementSpeedDivider: 2
   _forwardKey: 119
   _backwardKey: 115
   _leftKey: 97
@@ -638,6 +648,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!95 &1751971803
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751971796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d91338c0362590649b9cf2030d4a9283, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2026508823
 GameObject:
   m_ObjectHideFlags: 0
