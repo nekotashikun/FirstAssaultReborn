@@ -295,8 +295,6 @@ namespace Player
         {
             HandleCursorLockState();
 
-            HandleCrouchInput();
-
             HandleCameraInput();
 
             HandleGunInput();
@@ -304,6 +302,8 @@ namespace Player
             if (_controllerMovementState != PlayerControllerMovementState.OnGround &&
                 _controllerMovementState != PlayerControllerMovementState.Sprinting &&
                 _controllerMovementState != PlayerControllerMovementState.Walking) return;
+            
+            HandleCrouchInput();
 
             HandleMovementInput();
 
@@ -335,7 +335,7 @@ namespace Player
 
         private void HandleSprintingInput()
         {
-            if (Input.GetKey(_sprintKey))
+            if (Input.GetKey(_sprintKey) && _controllerMovementState == PlayerControllerMovementState.Walking && !_isCrouching)
             {
                 _controllerMovementState = PlayerControllerMovementState.Sprinting;
             }
