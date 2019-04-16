@@ -273,6 +273,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1884583544 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4483484312171336397, guid: 71ab090a669e6b849bf0620a02471d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 4483484313064844908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4483484313064844908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344,6 +350,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.123
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1884583544}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _walkAnimParameter
+      value: Iswalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _sprintAnimParameter
+      value: Isrunning
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _crouchAnimParameter
+      value: Iscrouch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _crouchWalkAnimParameter
+      value: Iscrouchwalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _jumpAnimParameter
+      value: isjumping
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _midAirParameter
+      value: isinair
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449833, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: _landAnimParameter
+      value: islanding
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449832, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483484312319449832, guid: 71ab090a669e6b849bf0620a02471d98,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ab090a669e6b849bf0620a02471d98, type: 3}
