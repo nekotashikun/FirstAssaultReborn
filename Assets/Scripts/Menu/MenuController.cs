@@ -35,7 +35,8 @@ namespace Menu
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
 
             _sceneName = SceneManager.GetActiveScene().name;
-            if (_sceneName == "MainMenu")
+            if (_sceneName != "MainMenu") return;
+            else
                 DontDestroyOnLoad(gameObject);
 
             SceneManager.activeSceneChanged += ChangedScene;
@@ -47,14 +48,14 @@ namespace Menu
 
         void Update()
         {
-            if (_sceneName != "MainMenu" && Input.GetKeyDown(KeyCode.Escape))
+            if (_sceneName == "MainMenu" || !Input.GetKeyUp(KeyCode.Escape)) return;
+            else
             {
-                Debug.Log(_sceneName.ToString());
                 if (_sceneName == "MultiplayerMenu")
                     ReturnToMainMenu();
                 else
                     SendMenuMessage(MenuType.PAUSE);
-                
+
             }
         }
 
