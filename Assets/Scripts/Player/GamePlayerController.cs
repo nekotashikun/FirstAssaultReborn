@@ -126,6 +126,7 @@ namespace Player
         private void FixedUpdate()
         {
             _playerRb.velocity = Vector3.zero;
+            _playerRb.angularVelocity = Vector3.zero;
             _weapon.ShouldAim = _isAiming;
 
             if (_isShooting && _controllerMovementState != PlayerControllerMovementState.Sprinting)
