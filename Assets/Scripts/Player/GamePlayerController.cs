@@ -125,6 +125,7 @@ namespace Player
 
         private void FixedUpdate()
         {
+            _playerRb.velocity = Vector3.zero;
             _weapon.ShouldAim = _isAiming;
 
             if (_isShooting && _controllerMovementState != PlayerControllerMovementState.Sprinting)
@@ -229,6 +230,7 @@ namespace Player
                 _directionVector = (_playerRb.transform.right * _inputDirection.x) +
                                    (_playerRb.transform.forward * _inputDirection.z);
             }
+
 
             _playerRb.MovePosition(_playerRb.position + (_directionVector * finalWalkingSpeed) * Time.deltaTime);
         }
