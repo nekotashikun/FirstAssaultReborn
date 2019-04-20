@@ -1,0 +1,963 @@
+fileFormatVersion: 2
+guid: 97e93e7ea42061041a82c95e1afb959e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box03:No0
+    100002: Camera02.Target:No0
+    100004: Camera02:No0
+    100006: DECAL_Object29:No0
+    100008: Editable Poly:No0
+    100010: Editable Poly:No0 1
+    100012: Editable Poly:No1
+    100014: Editable Poly:No1 1
+    100016: Editable Poly:No10
+    100018: Editable Poly:No10 1
+    100020: Editable Poly:No11
+    100022: Editable Poly:No11 1
+    100024: Editable Poly:No12
+    100026: Editable Poly:No12 1
+    100028: Editable Poly:No13
+    100030: Editable Poly:No13 1
+    100032: Editable Poly:No14
+    100034: Editable Poly:No14 1
+    100036: Editable Poly:No15
+    100038: Editable Poly:No15 1
+    100040: Editable Poly:No16
+    100042: Editable Poly:No16 1
+    100044: Editable Poly:No17
+    100046: Editable Poly:No17 1
+    100048: Editable Poly:No18
+    100050: Editable Poly:No18 1
+    100052: Editable Poly:No19
+    100054: Editable Poly:No19 1
+    100056: Editable Poly:No2
+    100058: Editable Poly:No2 1
+    100060: Editable Poly:No20
+    100062: Editable Poly:No20 1
+    100064: Editable Poly:No21
+    100066: Editable Poly:No21 1
+    100068: Editable Poly:No22
+    100070: Editable Poly:No22 1
+    100072: Editable Poly:No23
+    100074: Editable Poly:No23 1
+    100076: Editable Poly:No24
+    100078: Editable Poly:No24 1
+    100080: Editable Poly:No25
+    100082: Editable Poly:No25 1
+    100084: Editable Poly:No26
+    100086: Editable Poly:No26 1
+    100088: Editable Poly:No27
+    100090: Editable Poly:No27 1
+    100092: Editable Poly:No28
+    100094: Editable Poly:No28 1
+    100096: Editable Poly:No29
+    100098: Editable Poly:No29 1
+    100100: Editable Poly:No3
+    100102: Editable Poly:No3 1
+    100104: Editable Poly:No30
+    100106: Editable Poly:No30 1
+    100108: Editable Poly:No31
+    100110: Editable Poly:No31 1
+    100112: Editable Poly:No32
+    100114: Editable Poly:No32 1
+    100116: Editable Poly:No33
+    100118: Editable Poly:No33 1
+    100120: Editable Poly:No34
+    100122: Editable Poly:No34 1
+    100124: Editable Poly:No35
+    100126: Editable Poly:No35 1
+    100128: Editable Poly:No36
+    100130: Editable Poly:No36 1
+    100132: Editable Poly:No37
+    100134: Editable Poly:No37 1
+    100136: Editable Poly:No38
+    100138: Editable Poly:No38 1
+    100140: Editable Poly:No39
+    100142: Editable Poly:No39 1
+    100144: Editable Poly:No4
+    100146: Editable Poly:No4 1
+    100148: Editable Poly:No40
+    100150: Editable Poly:No40 1
+    100152: Editable Poly:No41
+    100154: Editable Poly:No41 1
+    100156: Editable Poly:No42
+    100158: Editable Poly:No42 1
+    100160: Editable Poly:No43
+    100162: Editable Poly:No43 1
+    100164: Editable Poly:No5
+    100166: Editable Poly:No5 1
+    100168: Editable Poly:No6
+    100170: Editable Poly:No6 1
+    100172: Editable Poly:No7
+    100174: Editable Poly:No7 1
+    100176: Editable Poly:No8
+    100178: Editable Poly:No8 1
+    100180: Editable Poly:No9
+    100182: Editable Poly:No9 1
+    100184: HANAROOm_SF_table01:No0
+    100186: Object01:No0
+    100188: Object03:No0
+    100190: Object25:No0
+    100192: Object28:No0
+    100194: Object30:No0
+    100196: Object31:No0
+    100198: Object34:No0
+    100200: Object39:No0
+    100202: Object41:No0
+    100204: Object423:No0
+    100206: Object424:No0
+    100208: Object428:No0
+    100210: Object50:No0
+    100212: Object554:No0
+    100214: Object557:No0
+    100216: Object559:No0
+    100218: Object564:No0
+    100220: Object576:No0
+    100222: Object610:No0
+    100224: Object623:No0
+    100226: Object628:No0
+    100228: Object638:No0
+    100230: Object640:No0
+    100232: Object645:No0
+    100234: Object665:No0
+    100236: Object776:No0
+    100238: Object784:No0
+    100240: Object785:No0
+    100242: Object787:No0
+    100244: Object788:No0
+    100246: Object789:No0
+    100248: Object792:No0
+    100250: Object793:No0
+    100252: Object797:No0
+    100254: Object798:No0
+    100256: Object801:No0
+    100258: Object802:No0
+    100260: Plane01:No0
+    100262: Plane02:No0
+    100264: Plane03:No0
+    100266: Scene Root
+    100268: sectorA_shelf02:No0
+    100270: //RootNode
+    100272: Waffle_WorldProb_Root:No0
+    100274: Tutorial_No0_45
+    100276: Tutorial_No10_49
+    100278: Tutorial_No11_51
+    100280: Tutorial_No12_53
+    100282: Tutorial_No13_55
+    100284: Tutorial_No14_57
+    100286: Tutorial_No15_59
+    100288: Tutorial_No16_61
+    100290: Tutorial_No17_63
+    100292: Tutorial_No18_65
+    100294: Tutorial_No19_67
+    100296: Tutorial_No1_47
+    100298: Tutorial_No20_71
+    100300: Tutorial_No21_73
+    100302: Tutorial_No22_75
+    100304: Tutorial_No23_77
+    100306: Tutorial_No24_79
+    100308: Tutorial_No25_81
+    100310: Tutorial_No26_83
+    100312: Tutorial_No27_85
+    100314: Tutorial_No28_87
+    100316: Tutorial_No29_89
+    100318: Tutorial_No2_69
+    100320: Tutorial_No30_93
+    100322: Tutorial_No31_95
+    100324: Tutorial_No32_97
+    100326: Tutorial_No33_99
+    100328: Tutorial_No34_101
+    100330: Tutorial_No35_103
+    100332: Tutorial_No36_105
+    100334: Tutorial_No37_107
+    100336: Tutorial_No38_109
+    100338: Tutorial_No39_111
+    100340: Tutorial_No3_91
+    100342: Tutorial_No40_115
+    100344: Tutorial_No41_117
+    100346: Tutorial_No42_119
+    100348: Tutorial_No43_121
+    100350: Tutorial_No4_113
+    100352: Tutorial_No5_123
+    100354: Tutorial_No6_125
+    100356: Tutorial_No7_127
+    100358: Tutorial_No8_129
+    100360: Tutorial_No9_131
+    400000: Box03:No0
+    400002: Camera02.Target:No0
+    400004: Camera02:No0
+    400006: DECAL_Object29:No0
+    400008: Editable Poly:No0
+    400010: Editable Poly:No0 1
+    400012: Editable Poly:No1
+    400014: Editable Poly:No1 1
+    400016: Editable Poly:No10
+    400018: Editable Poly:No10 1
+    400020: Editable Poly:No11
+    400022: Editable Poly:No11 1
+    400024: Editable Poly:No12
+    400026: Editable Poly:No12 1
+    400028: Editable Poly:No13
+    400030: Editable Poly:No13 1
+    400032: Editable Poly:No14
+    400034: Editable Poly:No14 1
+    400036: Editable Poly:No15
+    400038: Editable Poly:No15 1
+    400040: Editable Poly:No16
+    400042: Editable Poly:No16 1
+    400044: Editable Poly:No17
+    400046: Editable Poly:No17 1
+    400048: Editable Poly:No18
+    400050: Editable Poly:No18 1
+    400052: Editable Poly:No19
+    400054: Editable Poly:No19 1
+    400056: Editable Poly:No2
+    400058: Editable Poly:No2 1
+    400060: Editable Poly:No20
+    400062: Editable Poly:No20 1
+    400064: Editable Poly:No21
+    400066: Editable Poly:No21 1
+    400068: Editable Poly:No22
+    400070: Editable Poly:No22 1
+    400072: Editable Poly:No23
+    400074: Editable Poly:No23 1
+    400076: Editable Poly:No24
+    400078: Editable Poly:No24 1
+    400080: Editable Poly:No25
+    400082: Editable Poly:No25 1
+    400084: Editable Poly:No26
+    400086: Editable Poly:No26 1
+    400088: Editable Poly:No27
+    400090: Editable Poly:No27 1
+    400092: Editable Poly:No28
+    400094: Editable Poly:No28 1
+    400096: Editable Poly:No29
+    400098: Editable Poly:No29 1
+    400100: Editable Poly:No3
+    400102: Editable Poly:No3 1
+    400104: Editable Poly:No30
+    400106: Editable Poly:No30 1
+    400108: Editable Poly:No31
+    400110: Editable Poly:No31 1
+    400112: Editable Poly:No32
+    400114: Editable Poly:No32 1
+    400116: Editable Poly:No33
+    400118: Editable Poly:No33 1
+    400120: Editable Poly:No34
+    400122: Editable Poly:No34 1
+    400124: Editable Poly:No35
+    400126: Editable Poly:No35 1
+    400128: Editable Poly:No36
+    400130: Editable Poly:No36 1
+    400132: Editable Poly:No37
+    400134: Editable Poly:No37 1
+    400136: Editable Poly:No38
+    400138: Editable Poly:No38 1
+    400140: Editable Poly:No39
+    400142: Editable Poly:No39 1
+    400144: Editable Poly:No4
+    400146: Editable Poly:No4 1
+    400148: Editable Poly:No40
+    400150: Editable Poly:No40 1
+    400152: Editable Poly:No41
+    400154: Editable Poly:No41 1
+    400156: Editable Poly:No42
+    400158: Editable Poly:No42 1
+    400160: Editable Poly:No43
+    400162: Editable Poly:No43 1
+    400164: Editable Poly:No5
+    400166: Editable Poly:No5 1
+    400168: Editable Poly:No6
+    400170: Editable Poly:No6 1
+    400172: Editable Poly:No7
+    400174: Editable Poly:No7 1
+    400176: Editable Poly:No8
+    400178: Editable Poly:No8 1
+    400180: Editable Poly:No9
+    400182: Editable Poly:No9 1
+    400184: HANAROOm_SF_table01:No0
+    400186: Object01:No0
+    400188: Object03:No0
+    400190: Object25:No0
+    400192: Object28:No0
+    400194: Object30:No0
+    400196: Object31:No0
+    400198: Object34:No0
+    400200: Object39:No0
+    400202: Object41:No0
+    400204: Object423:No0
+    400206: Object424:No0
+    400208: Object428:No0
+    400210: Object50:No0
+    400212: Object554:No0
+    400214: Object557:No0
+    400216: Object559:No0
+    400218: Object564:No0
+    400220: Object576:No0
+    400222: Object610:No0
+    400224: Object623:No0
+    400226: Object628:No0
+    400228: Object638:No0
+    400230: Object640:No0
+    400232: Object645:No0
+    400234: Object665:No0
+    400236: Object776:No0
+    400238: Object784:No0
+    400240: Object785:No0
+    400242: Object787:No0
+    400244: Object788:No0
+    400246: Object789:No0
+    400248: Object792:No0
+    400250: Object793:No0
+    400252: Object797:No0
+    400254: Object798:No0
+    400256: Object801:No0
+    400258: Object802:No0
+    400260: Plane01:No0
+    400262: Plane02:No0
+    400264: Plane03:No0
+    400266: Scene Root
+    400268: sectorA_shelf02:No0
+    400270: //RootNode
+    400272: Waffle_WorldProb_Root:No0
+    400274: Tutorial_No0_45
+    400276: Tutorial_No10_49
+    400278: Tutorial_No11_51
+    400280: Tutorial_No12_53
+    400282: Tutorial_No13_55
+    400284: Tutorial_No14_57
+    400286: Tutorial_No15_59
+    400288: Tutorial_No16_61
+    400290: Tutorial_No17_63
+    400292: Tutorial_No18_65
+    400294: Tutorial_No19_67
+    400296: Tutorial_No1_47
+    400298: Tutorial_No20_71
+    400300: Tutorial_No21_73
+    400302: Tutorial_No22_75
+    400304: Tutorial_No23_77
+    400306: Tutorial_No24_79
+    400308: Tutorial_No25_81
+    400310: Tutorial_No26_83
+    400312: Tutorial_No27_85
+    400314: Tutorial_No28_87
+    400316: Tutorial_No29_89
+    400318: Tutorial_No2_69
+    400320: Tutorial_No30_93
+    400322: Tutorial_No31_95
+    400324: Tutorial_No32_97
+    400326: Tutorial_No33_99
+    400328: Tutorial_No34_101
+    400330: Tutorial_No35_103
+    400332: Tutorial_No36_105
+    400334: Tutorial_No37_107
+    400336: Tutorial_No38_109
+    400338: Tutorial_No39_111
+    400340: Tutorial_No3_91
+    400342: Tutorial_No40_115
+    400344: Tutorial_No41_117
+    400346: Tutorial_No42_119
+    400348: Tutorial_No43_121
+    400350: Tutorial_No4_113
+    400352: Tutorial_No5_123
+    400354: Tutorial_No6_125
+    400356: Tutorial_No7_127
+    400358: Tutorial_No8_129
+    400360: Tutorial_No9_131
+    2100000: DM01_wall_02_5
+    2100002: Standard_15_34
+    2100004: dd_62
+    2100006: dd_87
+    2100008: shelf_102
+    2100010: w04__123
+    2100012: pipe_0122_152
+    2100014: Standard_52s_181
+    2100016: dubing_in_01_209
+    2100018: Standard_5zs_238
+    2100020: dd_268
+    2100022: dd_290
+    2100024: Standard_52s2_305
+    2100026: dd_332
+    2100028: Standard_5_347
+    2100030: Standard_52_368
+    2100032: dubing_in_01_389
+    2100034: wall_01_406
+    2100036: dd_438
+    2100038: dd_460
+    2100040: Standard_52s_475
+    2100042: Standard_52ss_492
+    2100044: dd_519
+    2100046: dd_541
+    2100048: w_ceilling_556
+    2100050: Standard_52s_578
+    2100052: dubing_in_01_nospec_602
+    2100054: pipe_0122_noglow_627
+    2100056: w04_noglow_645
+    2100058: Standard_52sDD_670
+    2100060: generator_sh_02_688
+    2100062: Standard_52s2_noalpha_709
+    2100064: Standard_52ss_noglow_728
+    2100066: dd_753
+    2100068: dd_775
+    2100070: w_bar_01_noglow_790
+    2100072: Standard_5z_811
+    2100074: TDM03_machine_wall03_D_829
+    2100076: Standard_5zs_noalpha_B_850
+    2100078: 'Material #1705_871'
+    2100080: roomA0_1_892
+    2100082: Standard_15_920
+    2100084: w_bar_01_935
+    2100086: Standard_15_961
+    2100088: DM01_wall_02
+    2100090: blackfog
+    2100092: DIGITALSIGN1
+    2100094: MetalStair001_sh_glow
+    2100096: MetalWall001_sh
+    2100098: MetalWall002_sh
+    2100100: dubing_in_01
+    2100102: dubing_wall_01
+    2100104: MetalStair001_sh
+    2100106: TUT_Bottom_glow
+    2100108: W_celing
+    2100110: dubing_pipe_01
+    2100112: pipe_all_01
+    2100114: generator_sh_02
+    2100116: TUT_Bottom
+    2100118: W_bar_01
+    2100120: TDM03_machine_wall03
+    2100122: floor_01_blue-glow
+    2100124: SF_table
+    2100126: shelf_sh
+    2100128: DM01_roomA_01
+    2100130: W_bar_01_glow
+    2100132: pipe_all_01_glow
+    2100134: dubing_pipe_01_glow
+    2100136: floor_01_orange-glow
+    2300000: Tutorial_No0_45
+    2300002: Tutorial_No10_49
+    2300004: Tutorial_No11_51
+    2300006: Tutorial_No12_53
+    2300008: Tutorial_No13_55
+    2300010: Tutorial_No14_57
+    2300012: Tutorial_No15_59
+    2300014: Tutorial_No16_61
+    2300016: Tutorial_No17_63
+    2300018: Tutorial_No18_65
+    2300020: Tutorial_No19_67
+    2300022: Tutorial_No1_47
+    2300024: Tutorial_No20_71
+    2300026: Tutorial_No21_73
+    2300028: Tutorial_No22_75
+    2300030: Tutorial_No23_77
+    2300032: Tutorial_No24_79
+    2300034: Tutorial_No25_81
+    2300036: Tutorial_No26_83
+    2300038: Tutorial_No27_85
+    2300040: Tutorial_No28_87
+    2300042: Tutorial_No29_89
+    2300044: Tutorial_No2_69
+    2300046: Tutorial_No30_93
+    2300048: Tutorial_No31_95
+    2300050: Tutorial_No32_97
+    2300052: Tutorial_No33_99
+    2300054: Tutorial_No34_101
+    2300056: Tutorial_No35_103
+    2300058: Tutorial_No36_105
+    2300060: Tutorial_No37_107
+    2300062: Tutorial_No38_109
+    2300064: Tutorial_No39_111
+    2300066: Tutorial_No3_91
+    2300068: Tutorial_No40_115
+    2300070: Tutorial_No41_117
+    2300072: Tutorial_No42_119
+    2300074: Tutorial_No43_121
+    2300076: Tutorial_No4_113
+    2300078: Tutorial_No5_123
+    2300080: Tutorial_No6_125
+    2300082: Tutorial_No7_127
+    2300084: Tutorial_No8_129
+    2300086: Tutorial_No9_131
+    3300000: Tutorial_No0_45
+    3300002: Tutorial_No10_49
+    3300004: Tutorial_No11_51
+    3300006: Tutorial_No12_53
+    3300008: Tutorial_No13_55
+    3300010: Tutorial_No14_57
+    3300012: Tutorial_No15_59
+    3300014: Tutorial_No16_61
+    3300016: Tutorial_No17_63
+    3300018: Tutorial_No18_65
+    3300020: Tutorial_No19_67
+    3300022: Tutorial_No1_47
+    3300024: Tutorial_No20_71
+    3300026: Tutorial_No21_73
+    3300028: Tutorial_No22_75
+    3300030: Tutorial_No23_77
+    3300032: Tutorial_No24_79
+    3300034: Tutorial_No25_81
+    3300036: Tutorial_No26_83
+    3300038: Tutorial_No27_85
+    3300040: Tutorial_No28_87
+    3300042: Tutorial_No29_89
+    3300044: Tutorial_No2_69
+    3300046: Tutorial_No30_93
+    3300048: Tutorial_No31_95
+    3300050: Tutorial_No32_97
+    3300052: Tutorial_No33_99
+    3300054: Tutorial_No34_101
+    3300056: Tutorial_No35_103
+    3300058: Tutorial_No36_105
+    3300060: Tutorial_No37_107
+    3300062: Tutorial_No38_109
+    3300064: Tutorial_No39_111
+    3300066: Tutorial_No3_91
+    3300068: Tutorial_No40_115
+    3300070: Tutorial_No41_117
+    3300072: Tutorial_No42_119
+    3300074: Tutorial_No43_121
+    3300076: Tutorial_No4_113
+    3300078: Tutorial_No5_123
+    3300080: Tutorial_No6_125
+    3300082: Tutorial_No7_127
+    3300084: Tutorial_No8_129
+    3300086: Tutorial_No9_131
+    4300000: Editable Poly:No0
+    4300002: Editable Poly:No1
+    4300004: Editable Poly:No2
+    4300006: Editable Poly:No3
+    4300008: Editable Poly:No4
+    4300010: Editable Poly:No5
+    4300012: Editable Poly:No6
+    4300014: Editable Poly:No7
+    4300016: Editable Poly:No8
+    4300018: Editable Poly:No9
+    4300020: Editable Poly:No10
+    4300022: Editable Poly:No11
+    4300024: Editable Poly:No12
+    4300026: Editable Poly:No13
+    4300028: Editable Poly:No14
+    4300030: Editable Poly:No15
+    4300032: Editable Poly:No16
+    4300034: Editable Poly:No17
+    4300036: Editable Poly:No18
+    4300038: Editable Poly:No19
+    4300040: Editable Poly:No20
+    4300042: Editable Poly:No21
+    4300044: Editable Poly:No22
+    4300046: Editable Poly:No23
+    4300048: Editable Poly:No24
+    4300050: Editable Poly:No25
+    4300052: Editable Poly:No26
+    4300054: Editable Poly:No27
+    4300056: Editable Poly:No28
+    4300058: Editable Poly:No29
+    4300060: Editable Poly:No30
+    4300062: Editable Poly:No31
+    4300064: Editable Poly:No32
+    4300066: Editable Poly:No33
+    4300068: Editable Poly:No34
+    4300070: Editable Poly:No35
+    4300072: Editable Poly:No36
+    4300074: Editable Poly:No37
+    4300076: Editable Poly:No38
+    4300078: Editable Poly:No39
+    4300080: Editable Poly:No40
+    4300082: Editable Poly:No41
+    4300084: Editable Poly:No42
+    4300086: Editable Poly:No43
+    4300088: Tutorial_No0_45
+    4300090: Tutorial_No1_47
+    4300092: Tutorial_No10_49
+    4300094: Tutorial_No11_51
+    4300096: Tutorial_No12_53
+    4300098: Tutorial_No13_55
+    4300100: Tutorial_No14_57
+    4300102: Tutorial_No15_59
+    4300104: Tutorial_No16_61
+    4300106: Tutorial_No17_63
+    4300108: Tutorial_No18_65
+    4300110: Tutorial_No19_67
+    4300112: Tutorial_No2_69
+    4300114: Tutorial_No20_71
+    4300116: Tutorial_No21_73
+    4300118: Tutorial_No22_75
+    4300120: Tutorial_No23_77
+    4300122: Tutorial_No24_79
+    4300124: Tutorial_No25_81
+    4300126: Tutorial_No26_83
+    4300128: Tutorial_No27_85
+    4300130: Tutorial_No28_87
+    4300132: Tutorial_No29_89
+    4300134: Tutorial_No3_91
+    4300136: Tutorial_No30_93
+    4300138: Tutorial_No31_95
+    4300140: Tutorial_No32_97
+    4300142: Tutorial_No33_99
+    4300144: Tutorial_No34_101
+    4300146: Tutorial_No35_103
+    4300148: Tutorial_No36_105
+    4300150: Tutorial_No37_107
+    4300152: Tutorial_No38_109
+    4300154: Tutorial_No39_111
+    4300156: Tutorial_No4_113
+    4300158: Tutorial_No40_115
+    4300160: Tutorial_No41_117
+    4300162: Tutorial_No42_119
+    4300164: Tutorial_No43_121
+    4300166: Tutorial_No5_123
+    4300168: Tutorial_No6_125
+    4300170: Tutorial_No7_127
+    4300172: Tutorial_No8_129
+    4300174: Tutorial_No9_131
+    9500000: //RootNode
+    13700000: Editable Poly:No0
+    13700002: Editable Poly:No1
+    13700004: Editable Poly:No10
+    13700006: Editable Poly:No11
+    13700008: Editable Poly:No12
+    13700010: Editable Poly:No13
+    13700012: Editable Poly:No14
+    13700014: Editable Poly:No15
+    13700016: Editable Poly:No16
+    13700018: Editable Poly:No17
+    13700020: Editable Poly:No18
+    13700022: Editable Poly:No19
+    13700024: Editable Poly:No2
+    13700026: Editable Poly:No20
+    13700028: Editable Poly:No21
+    13700030: Editable Poly:No22
+    13700032: Editable Poly:No23
+    13700034: Editable Poly:No24
+    13700036: Editable Poly:No25
+    13700038: Editable Poly:No26
+    13700040: Editable Poly:No27
+    13700042: Editable Poly:No28
+    13700044: Editable Poly:No29
+    13700046: Editable Poly:No3
+    13700048: Editable Poly:No30
+    13700050: Editable Poly:No31
+    13700052: Editable Poly:No32
+    13700054: Editable Poly:No33
+    13700056: Editable Poly:No34
+    13700058: Editable Poly:No35
+    13700060: Editable Poly:No36
+    13700062: Editable Poly:No37
+    13700064: Editable Poly:No38
+    13700066: Editable Poly:No39
+    13700068: Editable Poly:No4
+    13700070: Editable Poly:No40
+    13700072: Editable Poly:No41
+    13700074: Editable Poly:No42
+    13700076: Editable Poly:No43
+    13700078: Editable Poly:No5
+    13700080: Editable Poly:No6
+    13700082: Editable Poly:No7
+    13700084: Editable Poly:No8
+    13700086: Editable Poly:No9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DM01_wall_02_5
+    second: {fileID: 2100000, guid: d4532d9b727f06a48917ca0abb3a352d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #1705_871'
+    second: {fileID: 2100000, guid: 35ebff784b271644ea44f4351ade884c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_15_34
+    second: {fileID: 2100000, guid: 7e902e5b2daba0b4eb857e510ff12022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_15_920
+    second: {fileID: 2100000, guid: 7e902e5b2daba0b4eb857e510ff12022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_15_961
+    second: {fileID: 2100000, guid: 7e902e5b2daba0b4eb857e510ff12022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52_368
+    second: {fileID: 2100000, guid: 092c0345d7a18314990f7b90d20a9908, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52s2_305
+    second: {fileID: 2100000, guid: de9a0115a73e9244ebcf155657c70da0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52s2_noalpha_709
+    second: {fileID: 2100000, guid: de9a0115a73e9244ebcf155657c70da0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52sDD_670
+    second: {fileID: 2100000, guid: 30bf25ff854999747b7a38672f66def1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52s_181
+    second: {fileID: 2100000, guid: 30bf25ff854999747b7a38672f66def1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52s_475
+    second: {fileID: 2100000, guid: 30bf25ff854999747b7a38672f66def1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52s_578
+    second: {fileID: 2100000, guid: 30bf25ff854999747b7a38672f66def1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52ss_492
+    second: {fileID: 2100000, guid: 4e00b91faf8ab534e8a3e9ae195ffe8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_52ss_noglow_728
+    second: {fileID: 2100000, guid: 15f7ab2d4194523448eccc5371612904, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_5_347
+    second: {fileID: 2100000, guid: 081bafb0a12cd804bb7d1600d5d07644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_5z_811
+    second: {fileID: 2100000, guid: 081bafb0a12cd804bb7d1600d5d07644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_5zs_238
+    second: {fileID: 2100000, guid: 05c484b5a2455f94087a431e75196c2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_5zs_noalpha_B_850
+    second: {fileID: 2100000, guid: 01b30d9ebbd345e48af7eab02de8b1c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TDM03_machine_wall03_D_829
+    second: {fileID: 2100000, guid: 639e35e5487e73c4188bf58446ed4479, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_268
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_290
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_332
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_438
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_460
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_519
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_541
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_62
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_753
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_775
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dd_87
+    second: {fileID: 2100000, guid: a26c64bddf6baf74c8e59a818390f6ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dubing_in_01_209
+    second: {fileID: 2100000, guid: 429949ccac31f7b45bd71874d74e5c2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dubing_in_01_389
+    second: {fileID: 2100000, guid: 429949ccac31f7b45bd71874d74e5c2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dubing_in_01_nospec_602
+    second: {fileID: 2100000, guid: 429949ccac31f7b45bd71874d74e5c2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: generator_sh_02_688
+    second: {fileID: 2100000, guid: 2f0cd6815fb23ee40827e6d308f5133a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe_0122_152
+    second: {fileID: 2100000, guid: b481227aadedc7340ba57aafea2afaaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe_0122_noglow_627
+    second: {fileID: 2100000, guid: 400652abf571b0b48be12542f505b359, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roomA0_1_892
+    second: {fileID: 2100000, guid: f7e3b513ab5741a48898a9ab866228d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shelf_102
+    second: {fileID: 2100000, guid: abbee4e993dd6f644b599d9e2427fc99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: w04__123
+    second: {fileID: 2100000, guid: d07ac54be8c6c5e4ca5fde7ec62f303d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: w04_noglow_645
+    second: {fileID: 2100000, guid: 069aee5e4093a434686f39596c23970a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: w_bar_01_935
+    second: {fileID: 2100000, guid: bf6ff3b70c887ce4193b93393edb4053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: w_bar_01_noglow_790
+    second: {fileID: 2100000, guid: 097bbdfbcb7ca5e42a76f906bb2e9311, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: w_ceilling_556
+    second: {fileID: 2100000, guid: ce607f872969b8e48834ccb11264926e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall_01_406
+    second: {fileID: 2100000, guid: c1642af2bfe6ef543a283e8ad0780db8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
