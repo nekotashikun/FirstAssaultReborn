@@ -28,5 +28,11 @@ namespace Weapons.Prototypes
 
             return didFire;
         }
+
+        public override bool Reload()
+        {
+            _currentCapacity = _maxCapacity;
+            return true;
+        }
     }
 }
