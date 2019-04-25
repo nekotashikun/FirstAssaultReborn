@@ -5,23 +5,23 @@ namespace Weapons
     public abstract class BaseWeaponBehaviour : MonoBehaviour
     {
         [SerializeField, Header("Basic Weapon Settings")]
-        private float _weaponDistance = 10f;
+        protected float _weaponDistance = 10f;
 
         [SerializeField]
-        private float _weaponActivationCooldown = 0.5f;
+        protected float _weaponActivationCooldown = 0.5f;
 
         [SerializeField]
-        private float _baseDamage = 1;
+        protected float _baseDamage = 1;
 
         [SerializeField]
-        private string _fireAnimParameter = string.Empty;
+        protected string _fireAnimParameter = string.Empty;
 
         [SerializeField]
-        private string _reloadAnimParameter = string.Empty;
+        protected string _reloadAnimParameter = string.Empty;
         
         public string FireAnimParameter => _fireAnimParameter;
 
-        public string ReloadAnimParameter => _reloadAnimParameter;
+        public virtual string ReloadAnimParameter => _reloadAnimParameter;
 
         protected float timeSinceLastWeaponUsage = 0;
 
