@@ -330,8 +330,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponDistance: 10
-  _weaponActivationCooldown: 0.5
+  _weaponActivationCooldown: 0.1
   _baseDamage: 1
+  _fireAnimParameter: fire
+  _reloadAnimParameter: reload
 --- !u!1 &1244675846
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +555,7 @@ MonoBehaviour:
   _sprintKey: 304
   _aimButton: 324
   _fireButton: 323
+  _reloadButton: 114
   _cursorUnlockKey: 27
   _cursorLockKey: 323
   _mouseSensitivity: 1
