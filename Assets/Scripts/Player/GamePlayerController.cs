@@ -166,7 +166,18 @@ namespace Player
             {
                 finalWalkingSpeed = _walkingSpeed;
             }
+            
+            float finalWalkingSpeed;
 
+            if (_isAiming || _isCrouching)
+            {
+                finalWalkingSpeed = _walkingSpeed / _aimCrouchMovementSpeedDivider;
+            }
+            else
+            {
+                finalWalkingSpeed = _walkingSpeed;
+            }
+            
             bool shouldIgnoreSprintMultiplierPrevention = false;
 
             switch (_controllerMovementState)
