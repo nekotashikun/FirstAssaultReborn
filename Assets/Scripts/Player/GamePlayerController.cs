@@ -91,6 +91,9 @@ namespace Player
         private KeyCode _fireButton = KeyCode.Mouse0;
 
         [SerializeField]
+        private KeyCode _reloadButton = KeyCode.R;
+
+        [SerializeField]
         private KeyCode _cursorUnlockKey = KeyCode.Escape;
 
         [SerializeField]
@@ -113,6 +116,7 @@ namespace Player
         private Vector3 _directionVector;
         private List<GameObject> _touchedFloorObjects;
         private bool _isCrouching;
+        private bool _isReloading;
 
         private void Start()
         {
@@ -129,9 +133,27 @@ namespace Player
             _playerRb.angularVelocity = Vector3.zero;
             _weapon.ShouldAim = _isAiming;
 
+            //TODO: Clean this up jeezus
             if (_isShooting && _controllerMovementState != PlayerControllerMovementState.Sprinting)
             {
-                _weapon.Fire();
+                //Debug.Log("[Matt] Fire Input Received [TRUE]");
+                _animator.SetBool(_weapon.FireAnimParameter, _weapon.Fire());
+            }
+            else
+            {
+                //Debug.Log("[Matt] Fire Input Received [FALSE]");
+                _animator.SetBool(_weapon.FireAnimParameter, false);
+            }
+
+            if (_isReloading && (_controllerMovementState == PlayerControllerMovementState.OnGround || _controllerMovementState == PlayerControllerMovementState.Walking))
+            {
+                //Debug.Log("[Matt] Reload Input Received [TRUE]");
+                _animator.SetBool(_weapon.ReloadAnimParameter, _weapon.Reload());
+            }
+            else
+            {
+                //Debug.Log("[Matt] Reload Input Received [FALSE]");
+                _animator.SetBool(_weapon.ReloadAnimParameter, false);
             }
 
             float finalWalkingSpeed;
@@ -157,7 +179,7 @@ namespace Player
                     _animator.SetBool(_midAirParameter, false);
                     _animator.SetBool(_landAnimParameter, false);
                     _animator.SetBool(_crouchWalkAnimParameter, false);
-                    _animator.SetBool(_crouchAnimParameter, !_isAiming && !_isShooting && _isCrouching);
+                    _animator.SetBool(_crouchAnimParameter, !_isAiming && !_isShooting && !_isReloading && _isCrouching);
                     break;
                 case PlayerControllerMovementState.Walking:
                     if (_animator == null) break;
@@ -178,7 +200,7 @@ namespace Player
                     _animator.SetBool(_midAirParameter, false);
                     _animator.SetBool(_landAnimParameter, false);
                     _animator.SetBool(_crouchWalkAnimParameter, false);
-                    _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting);
+                    _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting && !_isReloading);
                     goto case PlayerControllerMovementState.Sprinting;
                 case PlayerControllerMovementState.Sprinting:
                     if (_animator != null)
@@ -192,7 +214,7 @@ namespace Player
                         }
                         _animator.SetBool(_landAnimParameter, false);
                         _animator.SetBool(_crouchWalkAnimParameter, false);
-                        _animator.SetBool(_sprintAnimParameter, !_isAiming && !_isShooting);
+                        _animator.SetBool(_sprintAnimParameter, !_isAiming && !_isShooting && !_isReloading);
                     }
 
                     if (_isAiming || _isShooting) break;
@@ -215,7 +237,7 @@ namespace Player
                     _animator.SetBool(_midAirParameter, false);
                     _animator.SetBool(_landAnimParameter, false);
                     _animator.SetBool(_crouchWalkAnimParameter, false);
-                    _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting);
+                    _animator.SetBool(_midAirParameter, !_isAiming && !_isShooting && !_isReloading);
                     break;
             }
 
@@ -383,8 +405,9 @@ namespace Player
 
         private void HandleGunInput()
         {
-            _isAiming = Input.GetKey(_aimButton);
-            _isShooting = Input.GetKey(_fireButton);
+            _isAiming = Input.GetKey(_aimButton) && !_isReloading;
+            _isShooting = Input.GetKey(_fireButton) && !_isReloading;
+            _isReloading = Input.GetKeyDown(_reloadButton) && !_isShooting && !_isAiming;
         }
 
         private void HandleCameraInput()
