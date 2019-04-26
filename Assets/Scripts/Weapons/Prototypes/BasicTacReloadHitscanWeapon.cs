@@ -31,7 +31,6 @@ namespace Weapons.Prototypes
 
         public override bool Reload()
         {
-            Debug.Log("[Matt] reload called.");
             _currentCapacity = _maxCapacity;
             return true;
         }

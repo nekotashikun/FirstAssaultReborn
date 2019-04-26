@@ -144,8 +144,6 @@ namespace Player
                 //Debug.Log("[Matt] Fire Input Received [FALSE]");
                 _animator.SetBool(_weapon.FireAnimParameter, false);
             }
-            
-            Debug.Log("[Matt] " + _weapon.ReloadAnimParameter);
 
             if (_isReloading && (_controllerMovementState == PlayerControllerMovementState.OnGround || _controllerMovementState == PlayerControllerMovementState.Walking))
             {
