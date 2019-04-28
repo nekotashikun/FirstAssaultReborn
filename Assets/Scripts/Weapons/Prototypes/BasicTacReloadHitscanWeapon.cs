@@ -13,7 +13,7 @@ namespace Weapons.Prototypes
 
         private int _currentCapacity = 0;
 
-        public override string ReloadAnimParameter => _currentCapacity <= 0 ? _tacReloadAnimParameter : _reloadAnimParameter;
+        public override string ReloadAnimParameter => _currentCapacity > 0 ? _tacReloadAnimParameter : _reloadAnimParameter;
 
         private void Start()
         {
