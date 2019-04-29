@@ -1,18 +1,15 @@
 using Menu;
 using UnityEngine;
-
+using Utilities.MessageBroker;
 
 namespace Menu.Controls
 {
     public class MainMenuControl : MonoBehaviour
     {
-
-        [Header("Controller"), SerializeField]
-        private MenuController _menuController;
-
+        
         public void EnterConnectionMenu()
         {
-            _menuController.SendMenuMessage(MenuType.CONNECT);
+            GameMessenger.Instance.SendMessageOfType(new MenuMessage(MenuType.Connect));
         }
 
     }

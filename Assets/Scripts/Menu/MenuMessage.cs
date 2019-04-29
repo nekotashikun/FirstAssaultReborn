@@ -11,6 +11,6 @@ namespace Menu
             _menuState = desiredState;
         }
 
-        public MenuType MenuState { get { return _menuState; } }
+        public MenuType MenuState { get => _menuState; }
     }
 }

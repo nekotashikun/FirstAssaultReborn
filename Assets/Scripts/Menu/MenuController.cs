@@ -10,9 +10,20 @@ namespace Menu
     {
         private static MenuController _instance;
 
-        [Header("Required Game Objects"), SerializeField]
-        private GameObject _mainCanvas;
+        [Header("Input Assignment"), SerializeField]
+        private KeyCode _backKey;
+
+        [Header("Scenes"), SerializeField]
+        private string _mainMenuScene;
         [SerializeField]
+        private string _lobbyScene;
+        [SerializeField]
+        private string _inGameScene;
+
+        [Header("Shared Canvas"), SerializeField]
+        private GameObject _mainCanvas;
+
+        [Header("Menu Prefabs"),SerializeField]
         private GameObject _mainMenuPanelPrefab;
         [SerializeField]
         private GameObject _optionsPanelPrefab;
@@ -27,42 +38,42 @@ namespace Menu
       
         void Start()
         {
-            /*if (_instance == null)
-            {
-                _instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }*/
-
+            
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
 
-            //_sceneName = SceneManager.GetActiveScene().name;
-            //if (_sceneName != "MainMenu") return;
-            //else
-                DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
 
-            SceneManager.activeSceneChanged += OnChangeScene;
-            EditorSceneManager.activeSceneChanged += OnChangeScene;
+            SceneManager.activeSceneChanged += OnSceneChange;
+            EditorSceneManager.activeSceneChanged += OnSceneChange;
 
             _menuPrefabs = new GameObject[] { _mainMenuPanelPrefab, _optionsPanelPrefab, _pausePanelPrefab };
 
-            SceneManager.LoadScene("MainMenu");
-
+            SceneManager.LoadScene(_mainMenuScene);
         }
 
         void Update()
         {
-            if (_sceneName == "MainMenu" || !Input.GetKeyUp(KeyCode.Escape)) return;
-            else
-            {
-                if (_sceneName == "MultiplayerMenu")
-                    ReturnToMainMenu();
-                else
-                    SendMenuMessage(MenuType.PAUSE);
+            var currentScene = SceneManager.GetActiveScene();
 
+            if (!Input.GetKeyUp(_backKey) || _mainMenuPanelPrefab.activeSelf)
+            {
+                return;
+            }
+            else if (currentScene.name.Equals(_lobbyScene) && Input.GetKeyUp(_backKey))
+            {
+                ReturnToMainMenu();
+            }
+            else if (Input.GetKeyUp(_backKey)) 
+            {
+                if (!currentScene.name.Equals(_mainMenuScene))
+                {
+                    _messenger.SendMessageOfType(new MenuMessage(MenuType.Pause));
+                }
+                else
+                {
+                    _messenger.SendMessageOfType(new MenuMessage(MenuType.Main));
+                }
             }
         }
 
@@ -70,23 +81,23 @@ namespace Menu
         {
             switch (incomingMessage.MenuState)
             {
-                case MenuType.MAIN:
+                case MenuType.Main:
                     {
                         ResetPrefabs(_menuPrefabs[0]);
                         break;
                     }
-                case MenuType.CONNECT:
+                case MenuType.Connect:
                     {
                         ResetPrefabs();
-                        SceneManager.LoadScene("MultiplayerMenu");
+                        SceneManager.LoadScene(_lobbyScene);
                         break;
                     }
-                case MenuType.OPTIONS:
+                case MenuType.Options:
                     {
                         ResetPrefabs(_menuPrefabs[1]);
                         break;
                     }
-                case MenuType.PAUSE:
+                case MenuType.Pause:
                     {
                         ResetPrefabs(_menuPrefabs[2]);
                         break;
@@ -99,70 +110,50 @@ namespace Menu
             }
         }
 
-
         private void ResetPrefabs(GameObject keepAlive)
         {
             foreach (GameObject g in _menuPrefabs)
             {
                 if (g != keepAlive)
+                {
                     g.SetActive(false);
+                }
                 else
+                {
                     g.SetActive(true);
+                }
             }
         }
 
         private void ResetPrefabs()
         {
             foreach (GameObject g in _menuPrefabs)
+            { 
                 g.SetActive(false);
+            }
         }
 
-        private void OnChangeScene(Scene current, Scene next)
+        private void OnSceneChange(Scene current, Scene next)
         {
-            _sceneName = next.name;
-
-            if (_sceneName == "MainMenu")
+            if (next.name.Equals(_mainMenuScene))
+            {
                 EnterMainMenu();
+            }
         }
 
-        public string GetCurrentSceneName()
-        {
-            return _sceneName;
-        }
+        public void EnterOptionsMenu() => _messenger.SendMessageOfType(new MenuMessage(MenuType.Options));
 
-        public void SendMenuMessage(MenuType nextMenu)
-        {
-            Debug.Log("Sending Menu Message: " + nextMenu.ToString());
-            var _message = new MenuMessage(nextMenu);
-            _messenger.SendMessageOfType(_message);
-        }
+        public void EnterMainMenu() => _messenger.SendMessageOfType(new MenuMessage(MenuType.Main));
 
-        public void EnterOptionsMenu()
-        {
-            SendMenuMessage(MenuType.OPTIONS);
-        }
+        public void Exit() => Application.Quit();
 
-        public void EnterMainMenu()
-        {
-            SendMenuMessage(MenuType.MAIN);
-        }
+        public string GetSceneName() => _sceneName;
 
-        public void Exit()
-        {
-            if (UnityEditor.EditorApplication.isPlaying)
-                UnityEditor.EditorApplication.isPlaying = false;
-            else
-                Application.Quit();
-        }
-
-        public void ReturnToMainMenu()
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
-
-        public void OnDestroy()
-        {
-            _messenger.UnRegisterAllMessagesForObject(this);
-        }
+        public string GetMainMenuScene() => _mainMenuScene;
+        
+        public void ReturnToMainMenu() => SceneManager.LoadScene(_mainMenuScene);
+        
+        public void OnDestroy() => _messenger.UnRegisterAllMessagesForObject(this);
+        
     }
 }

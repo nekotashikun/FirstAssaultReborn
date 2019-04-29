@@ -2,10 +2,10 @@ namespace Menu
 {
     public enum MenuType
     {
-        MAIN,
-        OPTIONS,
-        CONNECT,
-        PAUSE,
-        GAME
+        Main,
+        Options,
+        Connect,
+        Pause,
+        Game
     }
 }
