@@ -32,7 +32,7 @@ namespace Menu
 
 
         private GameMessenger _messenger;
-        private string _sceneName;
+        private Scene _currentScene;
 
         private GameObject[] _menuPrefabs;
       
@@ -54,19 +54,17 @@ namespace Menu
 
         void Update()
         {
-            var currentScene = SceneManager.GetActiveScene();
-
             if (!Input.GetKeyUp(_backKey) || _mainMenuPanelPrefab.activeSelf)
             {
                 return;
             }
-            else if (currentScene.name.Equals(_lobbyScene) && Input.GetKeyUp(_backKey))
+            else if (_currentScene.name.Equals(_lobbyScene) && Input.GetKeyUp(_backKey))
             {
                 ReturnToMainMenu();
             }
             else if (Input.GetKeyUp(_backKey)) 
             {
-                if (!currentScene.name.Equals(_mainMenuScene))
+                if (!_currentScene.name.Equals(_mainMenuScene))
                 {
                     _messenger.SendMessageOfType(new MenuMessage(MenuType.Pause));
                 }
@@ -82,31 +80,17 @@ namespace Menu
             switch (incomingMessage.MenuState)
             {
                 case MenuType.Main:
-                    {
-                        ResetPrefabs(_menuPrefabs[0]);
-                        break;
-                    }
-                case MenuType.Connect:
-                    {
-                        ResetPrefabs();
-                        SceneManager.LoadScene(_lobbyScene);
-                        break;
-                    }
                 case MenuType.Options:
-                    {
-                        ResetPrefabs(_menuPrefabs[1]);
-                        break;
-                    }
                 case MenuType.Pause:
-                    {
-                        ResetPrefabs(_menuPrefabs[2]);
-                        break;
-                    }
+                    ResetPrefabs(_menuPrefabs[(int)incomingMessage.MenuState]);
+                    break;
+                case MenuType.Connect:
+                    ResetPrefabs();
+                    SceneManager.LoadScene(_lobbyScene);
+                    break;
                 default:
-                    {
-                        ResetPrefabs();
-                        break;
-                    }
+                    ResetPrefabs();
+                    break;
             }
         }
 
@@ -135,7 +119,9 @@ namespace Menu
 
         private void OnSceneChange(Scene current, Scene next)
         {
-            if (next.name.Equals(_mainMenuScene))
+            _currentScene = next;
+
+            if (_currentScene.name.Equals(_mainMenuScene))
             {
                 EnterMainMenu();
             }
@@ -147,7 +133,7 @@ namespace Menu
 
         public void Exit() => Application.Quit();
 
-        public string GetSceneName() => _sceneName;
+        public string GetSceneName() => _currentScene.name;
 
         public string GetMainMenuScene() => _mainMenuScene;
         

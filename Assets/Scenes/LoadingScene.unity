@@ -279,6 +279,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterConnectionMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2235318875956100016, guid: e485478fed8dd3c42b9a7150f00837ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 203170935}
+    - target: {fileID: 2235318875956100016, guid: e485478fed8dd3c42b9a7150f00837ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterPreviousMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 7871551005268116692, guid: e485478fed8dd3c42b9a7150f00837ad,
         type: 3}
       propertyPath: _menuController
@@ -396,6 +406,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be09cfddd12004a48a90ad029798c32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &203170935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7877130567379837169, guid: e485478fed8dd3c42b9a7150f00837ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 24754779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc918c152f016794fb4f5048cf07b1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1133642651
