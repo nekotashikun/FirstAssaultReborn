@@ -19,6 +19,7 @@ namespace Menu
         [SerializeField]
         private GameObject _pausePanelPrefab;
 
+
         private GameMessenger _messenger;
         private string _sceneName;
 
@@ -26,23 +27,29 @@ namespace Menu
       
         void Start()
         {
-            if (_instance == null)
+            /*if (_instance == null)
+            {
                 _instance = this;
+            }
             else
+            {
                 Destroy(gameObject);
+            }*/
 
             _messenger = GameMessenger.Instance;
             _messenger.RegisterSubscriberToMessageTypeOf<MenuMessage>(HandleMessage);
 
-            _sceneName = SceneManager.GetActiveScene().name;
-            if (_sceneName != "MainMenu") return;
-            else
+            //_sceneName = SceneManager.GetActiveScene().name;
+            //if (_sceneName != "MainMenu") return;
+            //else
                 DontDestroyOnLoad(gameObject);
 
-            SceneManager.activeSceneChanged += ChangedScene;
-            EditorSceneManager.activeSceneChanged += ChangedScene;
+            SceneManager.activeSceneChanged += OnChangeScene;
+            EditorSceneManager.activeSceneChanged += OnChangeScene;
 
             _menuPrefabs = new GameObject[] { _mainMenuPanelPrefab, _optionsPanelPrefab, _pausePanelPrefab };
+
+            SceneManager.LoadScene("MainMenu");
 
         }
 
@@ -110,8 +117,7 @@ namespace Menu
                 g.SetActive(false);
         }
 
-
-        private void ChangedScene(Scene current, Scene next)
+        private void OnChangeScene(Scene current, Scene next)
         {
             _sceneName = next.name;
 
