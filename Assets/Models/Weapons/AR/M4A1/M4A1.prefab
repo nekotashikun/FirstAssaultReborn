@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 6603133101841870062}
   - component: {fileID: 5456202856179959536}
   m_Layer: 0
-  m_Name: M4A1 1
+  m_Name: M4A1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,16 +722,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7558948036405704270}
-  m_LocalRotation: {x: 0.5023546, y: 0.5014447, z: -0.49776632, w: -0.49841934}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0.21, z: -0}
-  m_LocalScale: {x: 100.00011, y: 99.99987, z: 100.00003}
+  m_LocalScale: {x: 100, y: 100, z: 100.00003}
   m_Children:
   - {fileID: 6876692406240637776}
   - {fileID: 3755921718903177836}
   - {fileID: 2643990672400326665}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
 --- !u!95 &6603133101841870062
 Animator:
   serializedVersion: 3
@@ -764,11 +764,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponDistance: 10
-  _weaponActivationCooldown: 0.5
+  _weaponActivationCooldown: 0
   _baseDamage: 1
-  _fireAnimParameter: 
-  _reloadAnimParameter: 
-  _tacReloadAnimParameter: 
+  _fireAnimParameter: Isfiring
+  _reloadAnimParameter: Isreloadempty
+  _tacReloadAnimParameter: Isreloadtac
   _maxCapacity: 30
 --- !u!1 &8740092231052719228
 GameObject:
