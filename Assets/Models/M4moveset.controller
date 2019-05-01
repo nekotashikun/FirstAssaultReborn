@@ -130,9 +130,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.08972228
+  m_TransitionDuration: 0.029490475
   m_TransitionOffset: 0
-  m_ExitTime: 0.0000000012030441
+  m_ExitTime: 0.0000000014270775
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -227,9 +227,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.22081181
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -424,9 +424,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.10576284
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.000000065099655
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -496,9 +496,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0691571
+  m_TransitionDuration: 0.017404258
   m_TransitionOffset: 0
-  m_ExitTime: 0.0055856225
+  m_ExitTime: 0.00031153794
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -943,9 +943,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.0785084
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -993,9 +993,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0751592
+  m_TransitionDuration: 0.03087821
   m_TransitionOffset: 0
-  m_ExitTime: 5.9246286e-10
+  m_ExitTime: 4.872226e-10
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1090,9 +1090,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.14475384
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.0000000021470887
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1215,9 +1215,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.07311652
+  m_TransitionDuration: 0.030911746
   m_TransitionOffset: 0
-  m_ExitTime: 0.0000000021918665
+  m_ExitTime: 0.0000000026117914
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1324,7 +1324,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400002, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400004, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Iscrouch
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1378,7 +1378,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400006, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400008, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Isrunning
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1435,7 +1435,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400002, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Fire
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1468,7 +1468,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400002, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400004, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Isidle
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1552,7 +1552,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400004, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400006, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Isreloadempty
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1585,7 +1585,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400008, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400010, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Iswalking
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1616,7 +1616,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400004, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400006, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1647,7 +1647,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400008, guid: 085cbc6c0379b844b91208011d72723c, type: 3}
+  m_Motion: {fileID: 7400010, guid: 5907d67d815a0d44b8b9de1e63ea417b, type: 3}
   m_Tag: Iscrouchwalk
   m_SpeedParameter: 
   m_MirrorParameter: 
