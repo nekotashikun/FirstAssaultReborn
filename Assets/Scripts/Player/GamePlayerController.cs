@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -124,7 +124,7 @@ namespace Player
             _startingCameraPos = _playerCamera.transform.localPosition;
             _playerRb.useGravity = false;
             _touchedFloorObjects = new List<GameObject>();
-            _playerRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            _playerRb.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
         private void FixedUpdate()
