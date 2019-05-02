@@ -124,13 +124,12 @@ namespace Player
             _startingCameraPos = _playerCamera.transform.localPosition;
             _playerRb.useGravity = false;
             _touchedFloorObjects = new List<GameObject>();
-            _playerRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            _playerRb.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
         private void FixedUpdate()
         {
             _playerRb.velocity = Vector3.zero;
-            _playerRb.angularVelocity = Vector3.zero;
             _weapon.ShouldAim = _isAiming;
 
             //TODO: Clean this up jeezus
