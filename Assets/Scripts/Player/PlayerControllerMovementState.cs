@@ -3,7 +3,8 @@
     public enum PlayerControllerMovementState
     {
         OnGround,
-        OnGroundSprinting,
+        Walking,
+        Sprinting,
         Jumping,
         SprintJumping,
         JumpApplied,
