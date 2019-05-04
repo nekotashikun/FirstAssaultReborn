@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using Weapons.Prototypes;
 
@@ -34,8 +34,7 @@ namespace Weapons.Prototypes
         {
             StartCoroutine(ExecuteDelayedReload());
             return true;
-        }
-        
+        }        
         
         //TODO: fuck this is such a hack reeee but prototype so ye idc.
         private IEnumerator ExecuteDelayedReload()

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -130,6 +130,7 @@ namespace Player
         private void FixedUpdate()
         {
             _playerRb.velocity = Vector3.zero;
+
             _weapon.ShouldAim = _isAiming;
 
             //TODO: Clean this up jeezus
