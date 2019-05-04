@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using System.Collections;
+using UnityEngine;
 using Weapons.Prototypes;
 
 namespace Weapons.Prototypes
@@ -31,8 +32,16 @@ namespace Weapons.Prototypes
 
         public override bool Reload()
         {
-            _currentCapacity = _maxCapacity;
+            StartCoroutine(ExecuteDelayedReload());
             return true;
+        }        
+        
+        //TODO: fuck this is such a hack reeee but prototype so ye idc.
+        private IEnumerator ExecuteDelayedReload()
+        {
+            yield return new WaitForFixedUpdate();
+            yield return new WaitForFixedUpdate();
+            _currentCapacity = _maxCapacity;
         }
     }
 }

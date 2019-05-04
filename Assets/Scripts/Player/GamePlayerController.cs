@@ -130,7 +130,7 @@ namespace Player
         private void FixedUpdate()
         {
             _playerRb.velocity = Vector3.zero;
-            _playerRb.angularVelocity = Vector3.zero;
+
             _weapon.ShouldAim = _isAiming;
 
             //TODO: Clean this up jeezus
