@@ -18,6 +18,8 @@ namespace Scripts.Player.Balin.Character
         [SerializeField]
         public CharacterController characterController;
 
+        public string currentState = "";
+
         public float moveSpeed = 5;
         public float sprintSpeedModifier = 2f;
         public float walkSpeedModifier = 0.75f;
@@ -25,33 +27,59 @@ namespace Scripts.Player.Balin.Character
         public float rotateSpeed = 90;
         public float jumpSpeed = 5;
         public float airControlModifier = 0.2f;
-        public Vector2 moveTime = new Vector2();
         public AnimationCurve inertiaCurve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.1f, 0.9f, Mathf.Tan(Mathf.PI / 4), Mathf.Tan(Mathf.PI / 4)), new Keyframe(1f, 1f));
 
-        public float currentSpeed = 0;
 
         public float lookAngle = 0;
+        public Vector3 speed = Vector3.zero;
         public float verticalSpeed = 0;
-        public bool isPreviouslyGrounded = true;
-        public bool isCrouching = false;
-        public Vector2 jumpStartSpeed = new Vector2();
 
         private InputState _inputState;
-        public CharacterState characterState = CharacterStateMachine.Standing;
-
-        private int terrainLayerMask;
+        public CharacterBaseState characterState = CharacterStateMachine.Standing;
 
         // Start is called before the first frame update
         void Start()
         {
             characterController = gameObject.GetComponent<CharacterController>();
-            terrainLayerMask = LayerMask.GetMask("Terrain");
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
             characterState.OnFixedUpdate(this, _inputState);
+
+            if(characterState == CharacterStateMachine.Standing)
+            {
+                currentState = "Standing";
+            }
+            else if (characterState == CharacterStateMachine.Crouching)
+            {
+                currentState = "Crouching";
+            }
+            else if (characterState == CharacterStateMachine.Running)
+            {
+                currentState = "Running";
+            }
+            else if (characterState == CharacterStateMachine.CrouchWalking)
+            {
+                currentState = "CrouchWalking";
+            }
+            else if (characterState == CharacterStateMachine.Walking)
+            {
+                currentState = "Walking";
+            }
+            else if (characterState == CharacterStateMachine.Sprinting)
+            {
+                currentState = "Sprinting";
+            }
+            else if (characterState == CharacterStateMachine.Jumping)
+            {
+                currentState = "Jumping";
+            }
+            else if(characterState == CharacterStateMachine.Falling)
+            {
+                currentState = "Falling";
+            }
         }
 
         void Update()

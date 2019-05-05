@@ -28,7 +28,12 @@ namespace Scripts.Player.Balin.Input
         {
             get
             {
-                return MoveForward || MoveBackward || MoveRight || MoveLeft;
+                return
+                (MoveForward && !MoveBackward) ||
+                (!MoveForward && MoveBackward) ||
+                (MoveRight && !MoveLeft) ||
+                (!MoveRight && MoveLeft)
+                ;
             }
         }
 

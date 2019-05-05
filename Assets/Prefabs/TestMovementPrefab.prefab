@@ -865,6 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 0}
+  currentState: 
   moveSpeed: 5
   sprintSpeedModifier: 2
   walkSpeedModifier: 0.75
@@ -879,17 +880,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 43.078995
+      outSlope: 43.078995
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.14285703
     - serializedVersion: 3
-      time: 0.1
-      value: 0.9
-      inSlope: 1
-      outSlope: 1
+      time: 0.053571463
+      value: 0.9186614
+      inSlope: 2.4279451
+      outSlope: 2.4279451
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.12668458
+    - serializedVersion: 3
+      time: 0.1505127
+      value: 1
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
