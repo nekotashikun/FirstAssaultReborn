@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Scripts.Player.Balin
+namespace Scripts.Player.Balin.Input
 {
     public struct InputState
     {
-        public uint Tick { get; private set; };
+        public uint Tick { get; private set; }
 
         public float MouseHorizontal { get; private set; }
         public float MouseVertical { get; private set; }
@@ -23,6 +23,14 @@ namespace Scripts.Player.Balin
         public bool Walk { get; private set; }
 
         public bool Jump { get; private set; }
+
+        public bool IsMoving
+        {
+            get
+            {
+                return MoveForward || MoveBackward || MoveRight || MoveLeft;
+            }
+        }
 
         public InputState
         (
@@ -39,7 +47,7 @@ namespace Scripts.Player.Balin
             bool jump
         )
         {
-            Tick = tick,
+            Tick = tick;
 
             MouseHorizontal = mouseHorizontal;
             MouseVertical = mouseVertical;

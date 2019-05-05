@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 using Scripts.Network;
 
 [RequireComponent(typeof(IControllable))]
@@ -111,3 +111,4 @@ public class FollowerTest : MonoBehaviour
         updateNumber++;
     }
 }
+*/

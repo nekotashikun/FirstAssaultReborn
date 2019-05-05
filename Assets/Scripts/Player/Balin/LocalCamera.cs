@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Scripts.Player.Balin.Character;
+
 public class LocalCamera : MonoBehaviour
 {
 

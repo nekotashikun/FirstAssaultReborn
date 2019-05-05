@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using Scripts.Network;
-using Scripts.Player.Balin;
+using Scripts.Player.Balin.Input;
+using Scripts.Player.Balin.Character;
 
 [RequireComponent(typeof(IControllable))]
 public class LocalInput : MonoBehaviour

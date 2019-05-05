@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Scripts.Player.Balin
+namespace Scripts.Player.Balin.Input
 {
     public enum InputActionsEnum
     {
