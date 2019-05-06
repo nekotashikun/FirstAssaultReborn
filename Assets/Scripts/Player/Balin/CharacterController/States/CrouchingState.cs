@@ -21,7 +21,10 @@ namespace Scripts.Player.Balin.Character
         {
             base.OnFixedUpdate(character, inputState);
 
-            if (!inputState.Crouch)
+            if (
+            !inputState.Crouch &&
+            !Physics.SphereCast(new Ray(character.transform.position, Vector3.up), character.characterController.radius, 2f)
+            )
             {
                 CharacterStateMachine.ChangeState(character, inputState, CharacterStateMachine.Standing);
                 return;

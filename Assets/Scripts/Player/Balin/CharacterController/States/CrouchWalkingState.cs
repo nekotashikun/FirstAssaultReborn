@@ -27,7 +27,12 @@ namespace Scripts.Player.Balin.Character
                 return;
             }
 
-            if (!inputState.Crouch && inputState.IsMoving)
+            if (
+            !inputState.Crouch &&
+            inputState.IsMoving &&
+            !inputState.Crouch &&
+            !Physics.SphereCast(new Ray(character.transform.position, Vector3.up), character.characterController.radius, 2f)
+            )
             {
                 CharacterStateMachine.ChangeState(character, inputState, CharacterStateMachine.Running);
                 return;

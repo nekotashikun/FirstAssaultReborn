@@ -5962,7 +5962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localPlayer: {fileID: 2074289007}
-  maxVerticalSpeed: 1
+  maxVerticalSpeed: 7.5
 --- !u!81 &1934462997
 AudioListener:
   m_ObjectHideFlags: 0
