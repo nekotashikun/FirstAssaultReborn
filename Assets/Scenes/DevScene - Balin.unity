@@ -5536,6 +5536,12 @@ Transform:
   m_Father: {fileID: 1912480184}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1773564856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2443868809042241723, guid: 60afc5c9f9a06e7418e6a12a9c242dbd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2069998120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1784845233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5961,7 +5967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb94334457d18284fb4cd47768b28f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localPlayer: {fileID: 2074289007}
+  playerGameObject: {fileID: 1773564856}
   maxVerticalSpeed: 7.5
 --- !u!81 &1934462997
 AudioListener:
@@ -6380,18 +6386,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60afc5c9f9a06e7418e6a12a9c242dbd, type: 3}
---- !u!114 &2074289007 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1269351202942432932, guid: 60afc5c9f9a06e7418e6a12a9c242dbd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2069998120}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc2d1d300295dc449a6ae94be658c836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2084461970
 GameObject:
   m_ObjectHideFlags: 0
