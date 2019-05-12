@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{aa7678fb-e7cc-4cc8-9e03-2db03fecb4d6}">
+        <property name="assetPath">
+            <value>ambi_port_container_01.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>13.725170068027211</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4e91f6c6-a2a2-4ef7-a007-d0eed0aaf7ca}</destination>
+        </relationship>
+    </object>
+</objects>

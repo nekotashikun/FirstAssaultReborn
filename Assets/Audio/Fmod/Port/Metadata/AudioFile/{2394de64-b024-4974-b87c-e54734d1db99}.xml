@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{2394de64-b024-4974-b87c-e54734d1db99}">
+        <property name="assetPath">
+            <value>ambi_port_horn_01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>6.7391836734693875</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4e91f6c6-a2a2-4ef7-a007-d0eed0aaf7ca}</destination>
+        </relationship>
+    </object>
+</objects>

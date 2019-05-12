@@ -12,9 +12,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
-  MasterBanks: []
-  StringsBanks: []
-  stringsBankWriteTime: 0
+  EditorBanks:
+  - {fileID: 114681928596759572}
+  - {fileID: 114131874737876448}
+  EditorEvents:
+  - {fileID: 114932548616332982}
+  MasterBanks:
+  - {fileID: 114131874737876448}
+  StringsBanks:
+  - {fileID: 114681928596759572}
+  stringsBankWriteTime: 636932006249837933
   cacheVersion: 3
+--- !u!114 &114131874737876448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: G:\Reborn\branches-LFS\port\FirstAssaultReborn\Assets\Audio\Fmod\Port\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636932006249827933
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 184672
+  Exists: 1
+--- !u!114 &114681928596759572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Fmod\Port\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636932006249837933
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 728
+  Exists: 1
+--- !u!114 &114932548616332982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/New Event
+  guid: 003f59a45ca6c44caff183240c9f9510
+  Banks:
+  - {fileID: 114131874737876448}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13725

@@ -1,0 +1,1604 @@
+fileFormatVersion: 2
+guid: fba444b14ef69ea48a354010715958d2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 02:No0
+    100002: 05:No0
+    100004: Box03:No0
+    100006: Camera01.Target:No0
+    100008: Camera01:No0
+    100010: cargo:No0
+    100012: ccwbox02:No0
+    100014: ccwbox03:No0
+    100016: ccwbox:No0
+    100018: ConLifter03:No0
+    100020: container01_B20:No0
+    100022: Cylinder06:No0
+    100024: DECAL_2:No0
+    100026: Editable Poly:No0
+    100028: Editable Poly:No0 1
+    100030: Editable Poly:No1
+    100032: Editable Poly:No1 1
+    100034: Editable Poly:No10
+    100036: Editable Poly:No10 1
+    100038: Editable Poly:No100
+    100040: Editable Poly:No100 1
+    100042: Editable Poly:No101
+    100044: Editable Poly:No101 1
+    100046: Editable Poly:No102
+    100048: Editable Poly:No102 1
+    100050: Editable Poly:No103
+    100052: Editable Poly:No103 1
+    100054: Editable Poly:No104
+    100056: Editable Poly:No104 1
+    100058: Editable Poly:No105
+    100060: Editable Poly:No105 1
+    100062: Editable Poly:No106
+    100064: Editable Poly:No106 1
+    100066: Editable Poly:No107
+    100068: Editable Poly:No107 1
+    100070: Editable Poly:No108
+    100072: Editable Poly:No108 1
+    100074: Editable Poly:No109
+    100076: Editable Poly:No109 1
+    100078: Editable Poly:No11
+    100080: Editable Poly:No11 1
+    100082: Editable Poly:No110
+    100084: Editable Poly:No110 1
+    100086: Editable Poly:No111
+    100088: Editable Poly:No111 1
+    100090: Editable Poly:No112
+    100092: Editable Poly:No112 1
+    100094: Editable Poly:No113
+    100096: Editable Poly:No113 1
+    100098: Editable Poly:No114
+    100100: Editable Poly:No114 1
+    100102: Editable Poly:No115
+    100104: Editable Poly:No115 1
+    100106: Editable Poly:No116
+    100108: Editable Poly:No116 1
+    100110: Editable Poly:No117
+    100112: Editable Poly:No117 1
+    100114: Editable Poly:No118
+    100116: Editable Poly:No118 1
+    100118: Editable Poly:No119
+    100120: Editable Poly:No119 1
+    100122: Editable Poly:No12
+    100124: Editable Poly:No12 1
+    100126: Editable Poly:No120
+    100128: Editable Poly:No120 1
+    100130: Editable Poly:No121
+    100132: Editable Poly:No121 1
+    100134: Editable Poly:No122
+    100136: Editable Poly:No122 1
+    100138: Editable Poly:No123
+    100140: Editable Poly:No123 1
+    100142: Editable Poly:No124
+    100144: Editable Poly:No124 1
+    100146: Editable Poly:No125
+    100148: Editable Poly:No125 1
+    100150: Editable Poly:No126
+    100152: Editable Poly:No126 1
+    100154: Editable Poly:No127
+    100156: Editable Poly:No127 1
+    100158: Editable Poly:No128
+    100160: Editable Poly:No128 1
+    100162: Editable Poly:No129
+    100164: Editable Poly:No129 1
+    100166: Editable Poly:No13
+    100168: Editable Poly:No13 1
+    100170: Editable Poly:No130
+    100172: Editable Poly:No130 1
+    100174: Editable Poly:No131
+    100176: Editable Poly:No131 1
+    100178: Editable Poly:No132
+    100180: Editable Poly:No132 1
+    100182: Editable Poly:No133
+    100184: Editable Poly:No133 1
+    100186: Editable Poly:No134
+    100188: Editable Poly:No134 1
+    100190: Editable Poly:No135
+    100192: Editable Poly:No135 1
+    100194: Editable Poly:No136
+    100196: Editable Poly:No136 1
+    100198: Editable Poly:No137
+    100200: Editable Poly:No137 1
+    100202: Editable Poly:No138
+    100204: Editable Poly:No138 1
+    100206: Editable Poly:No139
+    100208: Editable Poly:No139 1
+    100210: Editable Poly:No14
+    100212: Editable Poly:No14 1
+    100214: Editable Poly:No140
+    100216: Editable Poly:No140 1
+    100218: Editable Poly:No141
+    100220: Editable Poly:No141 1
+    100222: Editable Poly:No142
+    100224: Editable Poly:No142 1
+    100226: Editable Poly:No143
+    100228: Editable Poly:No143 1
+    100230: Editable Poly:No144
+    100232: Editable Poly:No144 1
+    100234: Editable Poly:No145
+    100236: Editable Poly:No145 1
+    100238: Editable Poly:No146
+    100240: Editable Poly:No146 1
+    100242: Editable Poly:No147
+    100244: Editable Poly:No147 1
+    100246: Editable Poly:No148
+    100248: Editable Poly:No148 1
+    100250: Editable Poly:No149
+    100252: Editable Poly:No149 1
+    100254: Editable Poly:No15
+    100256: Editable Poly:No15 1
+    100258: Editable Poly:No150
+    100260: Editable Poly:No150 1
+    100262: Editable Poly:No151
+    100264: Editable Poly:No151 1
+    100266: Editable Poly:No152
+    100268: Editable Poly:No152 1
+    100270: Editable Poly:No153
+    100272: Editable Poly:No153 1
+    100274: Editable Poly:No154
+    100276: Editable Poly:No154 1
+    100278: Editable Poly:No155
+    100280: Editable Poly:No155 1
+    100282: Editable Poly:No156
+    100284: Editable Poly:No156 1
+    100286: Editable Poly:No157
+    100288: Editable Poly:No157 1
+    100290: Editable Poly:No158
+    100292: Editable Poly:No158 1
+    100294: Editable Poly:No159
+    100296: Editable Poly:No159 1
+    100298: Editable Poly:No16
+    100300: Editable Poly:No16 1
+    100302: Editable Poly:No160
+    100304: Editable Poly:No160 1
+    100306: Editable Poly:No161
+    100308: Editable Poly:No161 1
+    100310: Editable Poly:No162
+    100312: Editable Poly:No162 1
+    100314: Editable Poly:No163
+    100316: Editable Poly:No163 1
+    100318: Editable Poly:No164
+    100320: Editable Poly:No164 1
+    100322: Editable Poly:No165
+    100324: Editable Poly:No165 1
+    100326: Editable Poly:No166
+    100328: Editable Poly:No166 1
+    100330: Editable Poly:No167
+    100332: Editable Poly:No167 1
+    100334: Editable Poly:No168
+    100336: Editable Poly:No168 1
+    100338: Editable Poly:No169
+    100340: Editable Poly:No169 1
+    100342: Editable Poly:No17
+    100344: Editable Poly:No17 1
+    100346: Editable Poly:No170
+    100348: Editable Poly:No170 1
+    100350: Editable Poly:No171
+    100352: Editable Poly:No171 1
+    100354: Editable Poly:No172
+    100356: Editable Poly:No172 1
+    100358: Editable Poly:No173
+    100360: Editable Poly:No173 1
+    100362: Editable Poly:No174
+    100364: Editable Poly:No174 1
+    100366: Editable Poly:No175
+    100368: Editable Poly:No175 1
+    100370: Editable Poly:No176
+    100372: Editable Poly:No176 1
+    100374: Editable Poly:No177
+    100376: Editable Poly:No177 1
+    100378: Editable Poly:No178
+    100380: Editable Poly:No178 1
+    100382: Editable Poly:No179
+    100384: Editable Poly:No179 1
+    100386: Editable Poly:No18
+    100388: Editable Poly:No18 1
+    100390: Editable Poly:No180
+    100392: Editable Poly:No180 1
+    100394: Editable Poly:No181
+    100396: Editable Poly:No181 1
+    100398: Editable Poly:No182
+    100400: Editable Poly:No182 1
+    100402: Editable Poly:No183
+    100404: Editable Poly:No183 1
+    100406: Editable Poly:No184
+    100408: Editable Poly:No184 1
+    100410: Editable Poly:No185
+    100412: Editable Poly:No185 1
+    100414: Editable Poly:No19
+    100416: Editable Poly:No19 1
+    100418: Editable Poly:No2
+    100420: Editable Poly:No2 1
+    100422: Editable Poly:No20
+    100424: Editable Poly:No20 1
+    100426: Editable Poly:No21
+    100428: Editable Poly:No21 1
+    100430: Editable Poly:No22
+    100432: Editable Poly:No22 1
+    100434: Editable Poly:No23
+    100436: Editable Poly:No23 1
+    100438: Editable Poly:No24
+    100440: Editable Poly:No24 1
+    100442: Editable Poly:No25
+    100444: Editable Poly:No25 1
+    100446: Editable Poly:No26
+    100448: Editable Poly:No26 1
+    100450: Editable Poly:No27
+    100452: Editable Poly:No27 1
+    100454: Editable Poly:No28
+    100456: Editable Poly:No28 1
+    100458: Editable Poly:No29
+    100460: Editable Poly:No29 1
+    100462: Editable Poly:No3
+    100464: Editable Poly:No3 1
+    100466: Editable Poly:No30
+    100468: Editable Poly:No30 1
+    100470: Editable Poly:No31
+    100472: Editable Poly:No31 1
+    100474: Editable Poly:No32
+    100476: Editable Poly:No32 1
+    100478: Editable Poly:No33
+    100480: Editable Poly:No33 1
+    100482: Editable Poly:No34
+    100484: Editable Poly:No34 1
+    100486: Editable Poly:No35
+    100488: Editable Poly:No35 1
+    100490: Editable Poly:No36
+    100492: Editable Poly:No36 1
+    100494: Editable Poly:No37
+    100496: Editable Poly:No37 1
+    100498: Editable Poly:No38
+    100500: Editable Poly:No38 1
+    100502: Editable Poly:No39
+    100504: Editable Poly:No39 1
+    100506: Editable Poly:No4
+    100508: Editable Poly:No4 1
+    100510: Editable Poly:No40
+    100512: Editable Poly:No40 1
+    100514: Editable Poly:No41
+    100516: Editable Poly:No41 1
+    100518: Editable Poly:No42
+    100520: Editable Poly:No42 1
+    100522: Editable Poly:No43
+    100524: Editable Poly:No43 1
+    100526: Editable Poly:No44
+    100528: Editable Poly:No44 1
+    100530: Editable Poly:No45
+    100532: Editable Poly:No45 1
+    100534: Editable Poly:No46
+    100536: Editable Poly:No46 1
+    100538: Editable Poly:No47
+    100540: Editable Poly:No47 1
+    100542: Editable Poly:No48
+    100544: Editable Poly:No48 1
+    100546: Editable Poly:No49
+    100548: Editable Poly:No49 1
+    100550: Editable Poly:No5
+    100552: Editable Poly:No5 1
+    100554: Editable Poly:No50
+    100556: Editable Poly:No50 1
+    100558: Editable Poly:No51
+    100560: Editable Poly:No51 1
+    100562: Editable Poly:No52
+    100564: Editable Poly:No52 1
+    100566: Editable Poly:No53
+    100568: Editable Poly:No53 1
+    100570: Editable Poly:No54
+    100572: Editable Poly:No54 1
+    100574: Editable Poly:No55
+    100576: Editable Poly:No55 1
+    100578: Editable Poly:No56
+    100580: Editable Poly:No56 1
+    100582: Editable Poly:No57
+    100584: Editable Poly:No57 1
+    100586: Editable Poly:No58
+    100588: Editable Poly:No58 1
+    100590: Editable Poly:No59
+    100592: Editable Poly:No59 1
+    100594: Editable Poly:No6
+    100596: Editable Poly:No6 1
+    100598: Editable Poly:No60
+    100600: Editable Poly:No60 1
+    100602: Editable Poly:No61
+    100604: Editable Poly:No61 1
+    100606: Editable Poly:No62
+    100608: Editable Poly:No62 1
+    100610: Editable Poly:No63
+    100612: Editable Poly:No63 1
+    100614: Editable Poly:No64
+    100616: Editable Poly:No64 1
+    100618: Editable Poly:No65
+    100620: Editable Poly:No65 1
+    100622: Editable Poly:No66
+    100624: Editable Poly:No66 1
+    100626: Editable Poly:No67
+    100628: Editable Poly:No67 1
+    100630: Editable Poly:No68
+    100632: Editable Poly:No68 1
+    100634: Editable Poly:No69
+    100636: Editable Poly:No69 1
+    100638: Editable Poly:No7
+    100640: Editable Poly:No7 1
+    100642: Editable Poly:No70
+    100644: Editable Poly:No70 1
+    100646: Editable Poly:No71
+    100648: Editable Poly:No71 1
+    100650: Editable Poly:No72
+    100652: Editable Poly:No72 1
+    100654: Editable Poly:No73
+    100656: Editable Poly:No73 1
+    100658: Editable Poly:No74
+    100660: Editable Poly:No74 1
+    100662: Editable Poly:No75
+    100664: Editable Poly:No75 1
+    100666: Editable Poly:No76
+    100668: Editable Poly:No76 1
+    100670: Editable Poly:No77
+    100672: Editable Poly:No77 1
+    100674: Editable Poly:No78
+    100676: Editable Poly:No78 1
+    100678: Editable Poly:No79
+    100680: Editable Poly:No79 1
+    100682: Editable Poly:No8
+    100684: Editable Poly:No8 1
+    100686: Editable Poly:No80
+    100688: Editable Poly:No80 1
+    100690: Editable Poly:No81
+    100692: Editable Poly:No81 1
+    100694: Editable Poly:No82
+    100696: Editable Poly:No82 1
+    100698: Editable Poly:No83
+    100700: Editable Poly:No83 1
+    100702: Editable Poly:No84
+    100704: Editable Poly:No84 1
+    100706: Editable Poly:No85
+    100708: Editable Poly:No85 1
+    100710: Editable Poly:No86
+    100712: Editable Poly:No86 1
+    100714: Editable Poly:No87
+    100716: Editable Poly:No87 1
+    100718: Editable Poly:No88
+    100720: Editable Poly:No88 1
+    100722: Editable Poly:No89
+    100724: Editable Poly:No89 1
+    100726: Editable Poly:No9
+    100728: Editable Poly:No9 1
+    100730: Editable Poly:No90
+    100732: Editable Poly:No90 1
+    100734: Editable Poly:No91
+    100736: Editable Poly:No91 1
+    100738: Editable Poly:No92
+    100740: Editable Poly:No92 1
+    100742: Editable Poly:No93
+    100744: Editable Poly:No93 1
+    100746: Editable Poly:No94
+    100748: Editable Poly:No94 1
+    100750: Editable Poly:No95
+    100752: Editable Poly:No95 1
+    100754: Editable Poly:No96
+    100756: Editable Poly:No96 1
+    100758: Editable Poly:No97
+    100760: Editable Poly:No97 1
+    100762: Editable Poly:No98
+    100764: Editable Poly:No98 1
+    100766: Editable Poly:No99
+    100768: Editable Poly:No99 1
+    100770: HK_sign01_D_02:No0
+    100772: iame:No0
+    100774: inans:No0
+    100776: indeen:No0
+    100778: indoer_red:No0
+    100780: indoor001 stripe:No0
+    100782: indoor001_conlift001:No0
+    100784: indoor001_container:No0
+    100786: indoor001_fan:No0
+    100788: indoor001_metal001:No0
+    100790: indoor001_metalBar:No0
+    100792: indoor001_vent:No0
+    100794: indoor001_wall001:No0
+    100796: indoor002_ceiling:No0
+    100798: indoor002_fan:No0
+    100800: indoor002_pipe:No0
+    100802: indoor002_shelf:No0
+    100804: indoor002_stair:No0
+    100806: indoor002_stair_red:No0
+    100808: indoor002_stripe:No0
+    100810: indoor002_wire:No0
+    100812: indower:No0
+    100814: indtom:No0
+    100816: indttoms:No0
+    100818: innlift01:No0
+    100820: inttom2:No0
+    100822: inwall:No0
+    100824: LarConB_low03:No0
+    100826: LarConB_low04:No0
+    100828: Line04:No0
+    100830: Line05:No0
+    100832: low_base01:No0
+    100834: low_glass03:No0
+    100836: low_part01:No0
+    100838: //RootNode
+    100840: Object01:No0
+    100842: Object02:No0
+    100844: Object03:No0
+    100846: Object04:No0
+    100848: Object05:No0
+    100850: Object06:No0
+    100852: Object07:No0
+    100854: Object08:No0
+    100856: Object09:No0
+    100858: Object103:No0
+    100860: Object105:No0
+    100862: Object10:No0
+    100864: Object110:No0
+    100866: Object111:No0
+    100868: Object118:No0
+    100870: Object11:No0
+    100872: Object121:No0
+    100874: Object122:No0
+    100876: Object128:No0
+    100878: Object129:No0
+    100880: Object12:No0
+    100882: Object130:No0
+    100884: Object136:No0
+    100886: Object138:No0
+    100888: Object139:No0
+    100890: Object13:No0
+    100892: Object140:No0
+    100894: Object141:No0
+    100896: Object143:No0
+    100898: Object146:No0
+    100900: Object149:No0
+    100902: Object14:No0
+    100904: Object153:No0
+    100906: Object157:No0
+    100908: Object158:No0
+    100910: Object15:No0
+    100912: Object160:No0
+    100914: Object166:No0
+    100916: Object167:No0
+    100918: Object169:No0
+    100920: Object16:No0
+    100922: Object173:No0
+    100924: Object175:No0
+    100926: Object17:No0
+    100928: Object18:No0
+    100930: Object196:No0
+    100932: Object197:No0
+    100934: Object198:No0
+    100936: Object19:No0
+    100938: Object200:No0
+    100940: Object201:No0
+    100942: Object202:No0
+    100944: Object205:No0
+    100946: Object209:No0
+    100948: Object20:No0
+    100950: Object210:No0
+    100952: Object214:No0
+    100954: Object216:No0
+    100956: Object21:No0
+    100958: Object220:No0
+    100960: Object222:No0
+    100962: Object223:No0
+    100964: Object22:No0
+    100966: Object232:No0
+    100968: Object23:No0
+    100970: Object242:No0
+    100972: Object24:No0
+    100974: Object251:No0
+    100976: Object25:No0
+    100978: Object265:No0
+    100980: Object269:No0
+    100982: Object26:No0
+    100984: Object272:No0
+    100986: Object27:No0
+    100988: Object28:No0
+    100990: Object29:No0
+    100992: Object30:No0
+    100994: Object31:No0
+    100996: Object32:No0
+    100998: Object33:No0
+    101000: Object34:No0
+    101002: Object35:No0
+    101004: Object37:No0
+    101006: Object38:No0
+    101008: Object39:No0
+    101010: Object45:No0
+    101012: Object48:No0
+    101014: Object629:No0
+    101016: Object631:No0
+    101018: Object63:No0
+    101020: Object645:No0
+    101022: Object648:No0
+    101024: Object649:No0
+    101026: Object652:No0
+    101028: Object662:No0
+    101030: Object668:No0
+    101032: Object671:No0
+    101034: Object675:No0
+    101036: Object676:No0
+    101038: Object677:No0
+    101040: Object68:No0
+    101042: Object709:No0
+    101044: Object710:No0
+    101046: Object718:No0
+    101048: Object723:No0
+    101050: Object728:No0
+    101052: Object752:No0
+    101054: Object766:No0
+    101056: Object778:No0
+    101058: Object782:No0
+    101060: Object801:No0
+    101062: Object81:No0
+    101064: Object826:No0
+    101066: Object829:No0
+    101068: Object832:No0
+    101070: Object835:No0
+    101072: Object845:No0
+    101074: Object848:No0
+    101076: Object84:No0
+    101078: Object856:No0
+    101080: Object863:No0
+    101082: Object86:No0
+    101084: Object874:No0
+    101086: Object875:No0
+    101088: Object884:No0
+    101090: Object89:No0
+    101092: Object91:No0
+    101094: Object92:No0
+    101096: Object952:No0
+    101098: Object958:No0
+    101100: Object963:No0
+    101102: Object98:No0
+    101104: pipeLine01:No0
+    101106: Plane01:No0
+    101108: Plane02:No0
+    101110: Plane09:No0
+    101112: Scene Root
+    101114: sss:No0
+    101116: SUN.Target:No0
+    101118: SUN:No0
+    101120: TDM02_crane01_D:No0
+    101122: TDM02_crane02_D:No0
+    101124: TDM02_sign01:No0
+    101126: TDM02_sign04:No0
+    101128: Waffle_WorldProb_Root:No0
+    101130: Window:No0
+    101132: Window:No1
+    400000: 02:No0
+    400002: 05:No0
+    400004: Box03:No0
+    400006: Camera01.Target:No0
+    400008: Camera01:No0
+    400010: cargo:No0
+    400012: ccwbox02:No0
+    400014: ccwbox03:No0
+    400016: ccwbox:No0
+    400018: ConLifter03:No0
+    400020: container01_B20:No0
+    400022: Cylinder06:No0
+    400024: DECAL_2:No0
+    400026: Editable Poly:No0
+    400028: Editable Poly:No0 1
+    400030: Editable Poly:No1
+    400032: Editable Poly:No1 1
+    400034: Editable Poly:No10
+    400036: Editable Poly:No10 1
+    400038: Editable Poly:No100
+    400040: Editable Poly:No100 1
+    400042: Editable Poly:No101
+    400044: Editable Poly:No101 1
+    400046: Editable Poly:No102
+    400048: Editable Poly:No102 1
+    400050: Editable Poly:No103
+    400052: Editable Poly:No103 1
+    400054: Editable Poly:No104
+    400056: Editable Poly:No104 1
+    400058: Editable Poly:No105
+    400060: Editable Poly:No105 1
+    400062: Editable Poly:No106
+    400064: Editable Poly:No106 1
+    400066: Editable Poly:No107
+    400068: Editable Poly:No107 1
+    400070: Editable Poly:No108
+    400072: Editable Poly:No108 1
+    400074: Editable Poly:No109
+    400076: Editable Poly:No109 1
+    400078: Editable Poly:No11
+    400080: Editable Poly:No11 1
+    400082: Editable Poly:No110
+    400084: Editable Poly:No110 1
+    400086: Editable Poly:No111
+    400088: Editable Poly:No111 1
+    400090: Editable Poly:No112
+    400092: Editable Poly:No112 1
+    400094: Editable Poly:No113
+    400096: Editable Poly:No113 1
+    400098: Editable Poly:No114
+    400100: Editable Poly:No114 1
+    400102: Editable Poly:No115
+    400104: Editable Poly:No115 1
+    400106: Editable Poly:No116
+    400108: Editable Poly:No116 1
+    400110: Editable Poly:No117
+    400112: Editable Poly:No117 1
+    400114: Editable Poly:No118
+    400116: Editable Poly:No118 1
+    400118: Editable Poly:No119
+    400120: Editable Poly:No119 1
+    400122: Editable Poly:No12
+    400124: Editable Poly:No12 1
+    400126: Editable Poly:No120
+    400128: Editable Poly:No120 1
+    400130: Editable Poly:No121
+    400132: Editable Poly:No121 1
+    400134: Editable Poly:No122
+    400136: Editable Poly:No122 1
+    400138: Editable Poly:No123
+    400140: Editable Poly:No123 1
+    400142: Editable Poly:No124
+    400144: Editable Poly:No124 1
+    400146: Editable Poly:No125
+    400148: Editable Poly:No125 1
+    400150: Editable Poly:No126
+    400152: Editable Poly:No126 1
+    400154: Editable Poly:No127
+    400156: Editable Poly:No127 1
+    400158: Editable Poly:No128
+    400160: Editable Poly:No128 1
+    400162: Editable Poly:No129
+    400164: Editable Poly:No129 1
+    400166: Editable Poly:No13
+    400168: Editable Poly:No13 1
+    400170: Editable Poly:No130
+    400172: Editable Poly:No130 1
+    400174: Editable Poly:No131
+    400176: Editable Poly:No131 1
+    400178: Editable Poly:No132
+    400180: Editable Poly:No132 1
+    400182: Editable Poly:No133
+    400184: Editable Poly:No133 1
+    400186: Editable Poly:No134
+    400188: Editable Poly:No134 1
+    400190: Editable Poly:No135
+    400192: Editable Poly:No135 1
+    400194: Editable Poly:No136
+    400196: Editable Poly:No136 1
+    400198: Editable Poly:No137
+    400200: Editable Poly:No137 1
+    400202: Editable Poly:No138
+    400204: Editable Poly:No138 1
+    400206: Editable Poly:No139
+    400208: Editable Poly:No139 1
+    400210: Editable Poly:No14
+    400212: Editable Poly:No14 1
+    400214: Editable Poly:No140
+    400216: Editable Poly:No140 1
+    400218: Editable Poly:No141
+    400220: Editable Poly:No141 1
+    400222: Editable Poly:No142
+    400224: Editable Poly:No142 1
+    400226: Editable Poly:No143
+    400228: Editable Poly:No143 1
+    400230: Editable Poly:No144
+    400232: Editable Poly:No144 1
+    400234: Editable Poly:No145
+    400236: Editable Poly:No145 1
+    400238: Editable Poly:No146
+    400240: Editable Poly:No146 1
+    400242: Editable Poly:No147
+    400244: Editable Poly:No147 1
+    400246: Editable Poly:No148
+    400248: Editable Poly:No148 1
+    400250: Editable Poly:No149
+    400252: Editable Poly:No149 1
+    400254: Editable Poly:No15
+    400256: Editable Poly:No15 1
+    400258: Editable Poly:No150
+    400260: Editable Poly:No150 1
+    400262: Editable Poly:No151
+    400264: Editable Poly:No151 1
+    400266: Editable Poly:No152
+    400268: Editable Poly:No152 1
+    400270: Editable Poly:No153
+    400272: Editable Poly:No153 1
+    400274: Editable Poly:No154
+    400276: Editable Poly:No154 1
+    400278: Editable Poly:No155
+    400280: Editable Poly:No155 1
+    400282: Editable Poly:No156
+    400284: Editable Poly:No156 1
+    400286: Editable Poly:No157
+    400288: Editable Poly:No157 1
+    400290: Editable Poly:No158
+    400292: Editable Poly:No158 1
+    400294: Editable Poly:No159
+    400296: Editable Poly:No159 1
+    400298: Editable Poly:No16
+    400300: Editable Poly:No16 1
+    400302: Editable Poly:No160
+    400304: Editable Poly:No160 1
+    400306: Editable Poly:No161
+    400308: Editable Poly:No161 1
+    400310: Editable Poly:No162
+    400312: Editable Poly:No162 1
+    400314: Editable Poly:No163
+    400316: Editable Poly:No163 1
+    400318: Editable Poly:No164
+    400320: Editable Poly:No164 1
+    400322: Editable Poly:No165
+    400324: Editable Poly:No165 1
+    400326: Editable Poly:No166
+    400328: Editable Poly:No166 1
+    400330: Editable Poly:No167
+    400332: Editable Poly:No167 1
+    400334: Editable Poly:No168
+    400336: Editable Poly:No168 1
+    400338: Editable Poly:No169
+    400340: Editable Poly:No169 1
+    400342: Editable Poly:No17
+    400344: Editable Poly:No17 1
+    400346: Editable Poly:No170
+    400348: Editable Poly:No170 1
+    400350: Editable Poly:No171
+    400352: Editable Poly:No171 1
+    400354: Editable Poly:No172
+    400356: Editable Poly:No172 1
+    400358: Editable Poly:No173
+    400360: Editable Poly:No173 1
+    400362: Editable Poly:No174
+    400364: Editable Poly:No174 1
+    400366: Editable Poly:No175
+    400368: Editable Poly:No175 1
+    400370: Editable Poly:No176
+    400372: Editable Poly:No176 1
+    400374: Editable Poly:No177
+    400376: Editable Poly:No177 1
+    400378: Editable Poly:No178
+    400380: Editable Poly:No178 1
+    400382: Editable Poly:No179
+    400384: Editable Poly:No179 1
+    400386: Editable Poly:No18
+    400388: Editable Poly:No18 1
+    400390: Editable Poly:No180
+    400392: Editable Poly:No180 1
+    400394: Editable Poly:No181
+    400396: Editable Poly:No181 1
+    400398: Editable Poly:No182
+    400400: Editable Poly:No182 1
+    400402: Editable Poly:No183
+    400404: Editable Poly:No183 1
+    400406: Editable Poly:No184
+    400408: Editable Poly:No184 1
+    400410: Editable Poly:No185
+    400412: Editable Poly:No185 1
+    400414: Editable Poly:No19
+    400416: Editable Poly:No19 1
+    400418: Editable Poly:No2
+    400420: Editable Poly:No2 1
+    400422: Editable Poly:No20
+    400424: Editable Poly:No20 1
+    400426: Editable Poly:No21
+    400428: Editable Poly:No21 1
+    400430: Editable Poly:No22
+    400432: Editable Poly:No22 1
+    400434: Editable Poly:No23
+    400436: Editable Poly:No23 1
+    400438: Editable Poly:No24
+    400440: Editable Poly:No24 1
+    400442: Editable Poly:No25
+    400444: Editable Poly:No25 1
+    400446: Editable Poly:No26
+    400448: Editable Poly:No26 1
+    400450: Editable Poly:No27
+    400452: Editable Poly:No27 1
+    400454: Editable Poly:No28
+    400456: Editable Poly:No28 1
+    400458: Editable Poly:No29
+    400460: Editable Poly:No29 1
+    400462: Editable Poly:No3
+    400464: Editable Poly:No3 1
+    400466: Editable Poly:No30
+    400468: Editable Poly:No30 1
+    400470: Editable Poly:No31
+    400472: Editable Poly:No31 1
+    400474: Editable Poly:No32
+    400476: Editable Poly:No32 1
+    400478: Editable Poly:No33
+    400480: Editable Poly:No33 1
+    400482: Editable Poly:No34
+    400484: Editable Poly:No34 1
+    400486: Editable Poly:No35
+    400488: Editable Poly:No35 1
+    400490: Editable Poly:No36
+    400492: Editable Poly:No36 1
+    400494: Editable Poly:No37
+    400496: Editable Poly:No37 1
+    400498: Editable Poly:No38
+    400500: Editable Poly:No38 1
+    400502: Editable Poly:No39
+    400504: Editable Poly:No39 1
+    400506: Editable Poly:No4
+    400508: Editable Poly:No4 1
+    400510: Editable Poly:No40
+    400512: Editable Poly:No40 1
+    400514: Editable Poly:No41
+    400516: Editable Poly:No41 1
+    400518: Editable Poly:No42
+    400520: Editable Poly:No42 1
+    400522: Editable Poly:No43
+    400524: Editable Poly:No43 1
+    400526: Editable Poly:No44
+    400528: Editable Poly:No44 1
+    400530: Editable Poly:No45
+    400532: Editable Poly:No45 1
+    400534: Editable Poly:No46
+    400536: Editable Poly:No46 1
+    400538: Editable Poly:No47
+    400540: Editable Poly:No47 1
+    400542: Editable Poly:No48
+    400544: Editable Poly:No48 1
+    400546: Editable Poly:No49
+    400548: Editable Poly:No49 1
+    400550: Editable Poly:No5
+    400552: Editable Poly:No5 1
+    400554: Editable Poly:No50
+    400556: Editable Poly:No50 1
+    400558: Editable Poly:No51
+    400560: Editable Poly:No51 1
+    400562: Editable Poly:No52
+    400564: Editable Poly:No52 1
+    400566: Editable Poly:No53
+    400568: Editable Poly:No53 1
+    400570: Editable Poly:No54
+    400572: Editable Poly:No54 1
+    400574: Editable Poly:No55
+    400576: Editable Poly:No55 1
+    400578: Editable Poly:No56
+    400580: Editable Poly:No56 1
+    400582: Editable Poly:No57
+    400584: Editable Poly:No57 1
+    400586: Editable Poly:No58
+    400588: Editable Poly:No58 1
+    400590: Editable Poly:No59
+    400592: Editable Poly:No59 1
+    400594: Editable Poly:No6
+    400596: Editable Poly:No6 1
+    400598: Editable Poly:No60
+    400600: Editable Poly:No60 1
+    400602: Editable Poly:No61
+    400604: Editable Poly:No61 1
+    400606: Editable Poly:No62
+    400608: Editable Poly:No62 1
+    400610: Editable Poly:No63
+    400612: Editable Poly:No63 1
+    400614: Editable Poly:No64
+    400616: Editable Poly:No64 1
+    400618: Editable Poly:No65
+    400620: Editable Poly:No65 1
+    400622: Editable Poly:No66
+    400624: Editable Poly:No66 1
+    400626: Editable Poly:No67
+    400628: Editable Poly:No67 1
+    400630: Editable Poly:No68
+    400632: Editable Poly:No68 1
+    400634: Editable Poly:No69
+    400636: Editable Poly:No69 1
+    400638: Editable Poly:No7
+    400640: Editable Poly:No7 1
+    400642: Editable Poly:No70
+    400644: Editable Poly:No70 1
+    400646: Editable Poly:No71
+    400648: Editable Poly:No71 1
+    400650: Editable Poly:No72
+    400652: Editable Poly:No72 1
+    400654: Editable Poly:No73
+    400656: Editable Poly:No73 1
+    400658: Editable Poly:No74
+    400660: Editable Poly:No74 1
+    400662: Editable Poly:No75
+    400664: Editable Poly:No75 1
+    400666: Editable Poly:No76
+    400668: Editable Poly:No76 1
+    400670: Editable Poly:No77
+    400672: Editable Poly:No77 1
+    400674: Editable Poly:No78
+    400676: Editable Poly:No78 1
+    400678: Editable Poly:No79
+    400680: Editable Poly:No79 1
+    400682: Editable Poly:No8
+    400684: Editable Poly:No8 1
+    400686: Editable Poly:No80
+    400688: Editable Poly:No80 1
+    400690: Editable Poly:No81
+    400692: Editable Poly:No81 1
+    400694: Editable Poly:No82
+    400696: Editable Poly:No82 1
+    400698: Editable Poly:No83
+    400700: Editable Poly:No83 1
+    400702: Editable Poly:No84
+    400704: Editable Poly:No84 1
+    400706: Editable Poly:No85
+    400708: Editable Poly:No85 1
+    400710: Editable Poly:No86
+    400712: Editable Poly:No86 1
+    400714: Editable Poly:No87
+    400716: Editable Poly:No87 1
+    400718: Editable Poly:No88
+    400720: Editable Poly:No88 1
+    400722: Editable Poly:No89
+    400724: Editable Poly:No89 1
+    400726: Editable Poly:No9
+    400728: Editable Poly:No9 1
+    400730: Editable Poly:No90
+    400732: Editable Poly:No90 1
+    400734: Editable Poly:No91
+    400736: Editable Poly:No91 1
+    400738: Editable Poly:No92
+    400740: Editable Poly:No92 1
+    400742: Editable Poly:No93
+    400744: Editable Poly:No93 1
+    400746: Editable Poly:No94
+    400748: Editable Poly:No94 1
+    400750: Editable Poly:No95
+    400752: Editable Poly:No95 1
+    400754: Editable Poly:No96
+    400756: Editable Poly:No96 1
+    400758: Editable Poly:No97
+    400760: Editable Poly:No97 1
+    400762: Editable Poly:No98
+    400764: Editable Poly:No98 1
+    400766: Editable Poly:No99
+    400768: Editable Poly:No99 1
+    400770: HK_sign01_D_02:No0
+    400772: iame:No0
+    400774: inans:No0
+    400776: indeen:No0
+    400778: indoer_red:No0
+    400780: indoor001 stripe:No0
+    400782: indoor001_conlift001:No0
+    400784: indoor001_container:No0
+    400786: indoor001_fan:No0
+    400788: indoor001_metal001:No0
+    400790: indoor001_metalBar:No0
+    400792: indoor001_vent:No0
+    400794: indoor001_wall001:No0
+    400796: indoor002_ceiling:No0
+    400798: indoor002_fan:No0
+    400800: indoor002_pipe:No0
+    400802: indoor002_shelf:No0
+    400804: indoor002_stair:No0
+    400806: indoor002_stair_red:No0
+    400808: indoor002_stripe:No0
+    400810: indoor002_wire:No0
+    400812: indower:No0
+    400814: indtom:No0
+    400816: indttoms:No0
+    400818: innlift01:No0
+    400820: inttom2:No0
+    400822: inwall:No0
+    400824: LarConB_low03:No0
+    400826: LarConB_low04:No0
+    400828: Line04:No0
+    400830: Line05:No0
+    400832: low_base01:No0
+    400834: low_glass03:No0
+    400836: low_part01:No0
+    400838: //RootNode
+    400840: Object01:No0
+    400842: Object02:No0
+    400844: Object03:No0
+    400846: Object04:No0
+    400848: Object05:No0
+    400850: Object06:No0
+    400852: Object07:No0
+    400854: Object08:No0
+    400856: Object09:No0
+    400858: Object103:No0
+    400860: Object105:No0
+    400862: Object10:No0
+    400864: Object110:No0
+    400866: Object111:No0
+    400868: Object118:No0
+    400870: Object11:No0
+    400872: Object121:No0
+    400874: Object122:No0
+    400876: Object128:No0
+    400878: Object129:No0
+    400880: Object12:No0
+    400882: Object130:No0
+    400884: Object136:No0
+    400886: Object138:No0
+    400888: Object139:No0
+    400890: Object13:No0
+    400892: Object140:No0
+    400894: Object141:No0
+    400896: Object143:No0
+    400898: Object146:No0
+    400900: Object149:No0
+    400902: Object14:No0
+    400904: Object153:No0
+    400906: Object157:No0
+    400908: Object158:No0
+    400910: Object15:No0
+    400912: Object160:No0
+    400914: Object166:No0
+    400916: Object167:No0
+    400918: Object169:No0
+    400920: Object16:No0
+    400922: Object173:No0
+    400924: Object175:No0
+    400926: Object17:No0
+    400928: Object18:No0
+    400930: Object196:No0
+    400932: Object197:No0
+    400934: Object198:No0
+    400936: Object19:No0
+    400938: Object200:No0
+    400940: Object201:No0
+    400942: Object202:No0
+    400944: Object205:No0
+    400946: Object209:No0
+    400948: Object20:No0
+    400950: Object210:No0
+    400952: Object214:No0
+    400954: Object216:No0
+    400956: Object21:No0
+    400958: Object220:No0
+    400960: Object222:No0
+    400962: Object223:No0
+    400964: Object22:No0
+    400966: Object232:No0
+    400968: Object23:No0
+    400970: Object242:No0
+    400972: Object24:No0
+    400974: Object251:No0
+    400976: Object25:No0
+    400978: Object265:No0
+    400980: Object269:No0
+    400982: Object26:No0
+    400984: Object272:No0
+    400986: Object27:No0
+    400988: Object28:No0
+    400990: Object29:No0
+    400992: Object30:No0
+    400994: Object31:No0
+    400996: Object32:No0
+    400998: Object33:No0
+    401000: Object34:No0
+    401002: Object35:No0
+    401004: Object37:No0
+    401006: Object38:No0
+    401008: Object39:No0
+    401010: Object45:No0
+    401012: Object48:No0
+    401014: Object629:No0
+    401016: Object631:No0
+    401018: Object63:No0
+    401020: Object645:No0
+    401022: Object648:No0
+    401024: Object649:No0
+    401026: Object652:No0
+    401028: Object662:No0
+    401030: Object668:No0
+    401032: Object671:No0
+    401034: Object675:No0
+    401036: Object676:No0
+    401038: Object677:No0
+    401040: Object68:No0
+    401042: Object709:No0
+    401044: Object710:No0
+    401046: Object718:No0
+    401048: Object723:No0
+    401050: Object728:No0
+    401052: Object752:No0
+    401054: Object766:No0
+    401056: Object778:No0
+    401058: Object782:No0
+    401060: Object801:No0
+    401062: Object81:No0
+    401064: Object826:No0
+    401066: Object829:No0
+    401068: Object832:No0
+    401070: Object835:No0
+    401072: Object845:No0
+    401074: Object848:No0
+    401076: Object84:No0
+    401078: Object856:No0
+    401080: Object863:No0
+    401082: Object86:No0
+    401084: Object874:No0
+    401086: Object875:No0
+    401088: Object884:No0
+    401090: Object89:No0
+    401092: Object91:No0
+    401094: Object92:No0
+    401096: Object952:No0
+    401098: Object958:No0
+    401100: Object963:No0
+    401102: Object98:No0
+    401104: pipeLine01:No0
+    401106: Plane01:No0
+    401108: Plane02:No0
+    401110: Plane09:No0
+    401112: Scene Root
+    401114: sss:No0
+    401116: SUN.Target:No0
+    401118: SUN:No0
+    401120: TDM02_crane01_D:No0
+    401122: TDM02_crane02_D:No0
+    401124: TDM02_sign01:No0
+    401126: TDM02_sign04:No0
+    401128: Waffle_WorldProb_Root:No0
+    401130: Window:No0
+    401132: Window:No1
+    2100000: No Name
+    2100002: 'Material #41_1753'
+    2100004: ds1_2312
+    2100006: indoor002 sign_2355
+    2100008: ds1_3432
+    2100010: Standard_7s1_3505
+    4300000: Editable Poly:No0
+    4300002: Editable Poly:No1
+    4300004: Editable Poly:No2
+    4300006: Editable Poly:No3
+    4300008: Editable Poly:No4
+    4300010: Editable Poly:No5
+    4300012: Editable Poly:No6
+    4300014: Editable Poly:No7
+    4300016: Editable Poly:No8
+    4300018: Editable Poly:No9
+    4300020: Editable Poly:No10
+    4300022: Editable Poly:No11
+    4300024: Editable Poly:No12
+    4300026: Editable Poly:No13
+    4300028: Editable Poly:No14
+    4300030: Editable Poly:No15
+    4300032: Editable Poly:No16
+    4300034: Editable Poly:No17
+    4300036: Editable Poly:No18
+    4300038: Editable Poly:No19
+    4300040: Editable Poly:No20
+    4300042: Editable Poly:No21
+    4300044: Editable Poly:No22
+    4300046: Editable Poly:No23
+    4300048: Editable Poly:No24
+    4300050: Editable Poly:No25
+    4300052: Editable Poly:No26
+    4300054: Editable Poly:No27
+    4300056: Editable Poly:No28
+    4300058: Editable Poly:No29
+    4300060: Editable Poly:No30
+    4300062: Editable Poly:No31
+    4300064: Editable Poly:No32
+    4300066: Editable Poly:No33
+    4300068: Editable Poly:No34
+    4300070: Editable Poly:No35
+    4300072: Editable Poly:No36
+    4300074: Editable Poly:No37
+    4300076: Editable Poly:No38
+    4300078: Editable Poly:No39
+    4300080: Editable Poly:No40
+    4300082: Editable Poly:No41
+    4300084: Editable Poly:No42
+    4300086: Editable Poly:No43
+    4300088: Editable Poly:No44
+    4300090: Editable Poly:No45
+    4300092: Editable Poly:No46
+    4300094: Editable Poly:No47
+    4300096: Editable Poly:No48
+    4300098: Editable Poly:No49
+    4300100: Editable Poly:No50
+    4300102: Editable Poly:No51
+    4300104: Editable Poly:No52
+    4300106: Editable Poly:No53
+    4300108: Editable Poly:No54
+    4300110: Editable Poly:No55
+    4300112: Editable Poly:No56
+    4300114: Editable Poly:No57
+    4300116: Editable Poly:No58
+    4300118: Editable Poly:No59
+    4300120: Editable Poly:No60
+    4300122: Editable Poly:No61
+    4300124: Editable Poly:No62
+    4300126: Editable Poly:No63
+    4300128: Editable Poly:No64
+    4300130: Editable Poly:No65
+    4300132: Editable Poly:No66
+    4300134: Editable Poly:No67
+    4300136: Editable Poly:No68
+    4300138: Editable Poly:No69
+    4300140: Editable Poly:No70
+    4300142: Editable Poly:No71
+    4300144: Editable Poly:No72
+    4300146: Editable Poly:No73
+    4300148: Editable Poly:No74
+    4300150: Editable Poly:No75
+    4300152: Editable Poly:No76
+    4300154: Editable Poly:No77
+    4300156: Editable Poly:No78
+    4300158: Editable Poly:No79
+    4300160: Editable Poly:No80
+    4300162: Editable Poly:No81
+    4300164: Editable Poly:No82
+    4300166: Editable Poly:No83
+    4300168: Editable Poly:No84
+    4300170: Editable Poly:No85
+    4300172: Editable Poly:No86
+    4300174: Editable Poly:No87
+    4300176: Editable Poly:No88
+    4300178: Editable Poly:No89
+    4300180: Editable Poly:No90
+    4300182: Editable Poly:No91
+    4300184: Editable Poly:No92
+    4300186: Editable Poly:No93
+    4300188: Editable Poly:No94
+    4300190: Editable Poly:No95
+    4300192: Editable Poly:No96
+    4300194: Editable Poly:No97
+    4300196: Editable Poly:No98
+    4300198: Editable Poly:No99
+    4300200: Editable Poly:No100
+    4300202: Editable Poly:No101
+    4300204: Editable Poly:No102
+    4300206: Editable Poly:No103
+    4300208: Editable Poly:No104
+    4300210: Editable Poly:No105
+    4300212: Editable Poly:No106
+    4300214: Editable Poly:No107
+    4300216: Editable Poly:No108
+    4300218: Editable Poly:No109
+    4300220: Editable Poly:No110
+    4300222: Editable Poly:No111
+    4300224: Editable Poly:No112
+    4300226: Editable Poly:No113
+    4300228: Editable Poly:No114
+    4300230: Editable Poly:No115
+    4300232: Editable Poly:No116
+    4300234: Editable Poly:No117
+    4300236: Editable Poly:No118
+    4300238: Editable Poly:No119
+    4300240: Editable Poly:No120
+    4300242: Editable Poly:No121
+    4300244: Editable Poly:No122
+    4300246: Editable Poly:No123
+    4300248: Editable Poly:No124
+    4300250: Editable Poly:No125
+    4300252: Editable Poly:No126
+    4300254: Editable Poly:No127
+    4300256: Editable Poly:No128
+    4300258: Editable Poly:No129
+    4300260: Editable Poly:No130
+    4300262: Editable Poly:No131
+    4300264: Editable Poly:No132
+    4300266: Editable Poly:No133
+    4300268: Editable Poly:No134
+    4300270: Editable Poly:No135
+    4300272: Editable Poly:No136
+    4300274: Editable Poly:No137
+    4300276: Editable Poly:No138
+    4300278: Editable Poly:No139
+    4300280: Editable Poly:No140
+    4300282: Editable Poly:No141
+    4300284: Editable Poly:No142
+    4300286: Editable Poly:No143
+    4300288: Editable Poly:No144
+    4300290: Editable Poly:No145
+    4300292: Editable Poly:No146
+    4300294: Editable Poly:No147
+    4300296: Editable Poly:No148
+    4300298: Editable Poly:No149
+    4300300: Editable Poly:No150
+    4300302: Editable Poly:No151
+    4300304: Editable Poly:No152
+    4300306: Editable Poly:No153
+    4300308: Editable Poly:No154
+    4300310: Editable Poly:No155
+    4300312: Editable Poly:No156
+    4300314: Editable Poly:No157
+    4300316: Editable Poly:No158
+    4300318: Editable Poly:No159
+    4300320: Editable Poly:No160
+    4300322: Editable Poly:No161
+    4300324: Editable Poly:No162
+    4300326: Editable Poly:No163
+    4300328: Editable Poly:No164
+    4300330: Editable Poly:No165
+    4300332: Editable Poly:No166
+    4300334: Editable Poly:No167
+    4300336: Editable Poly:No168
+    4300338: Editable Poly:No169
+    4300340: Editable Poly:No170
+    4300342: Editable Poly:No171
+    4300344: Editable Poly:No172
+    4300346: Editable Poly:No173
+    4300348: Editable Poly:No174
+    4300350: Editable Poly:No175
+    4300352: Editable Poly:No176
+    4300354: Editable Poly:No177
+    4300356: Editable Poly:No178
+    4300358: Editable Poly:No179
+    4300360: Editable Poly:No180
+    4300362: Editable Poly:No181
+    4300364: Editable Poly:No182
+    4300366: Editable Poly:No183
+    4300368: Editable Poly:No184
+    4300370: Editable Poly:No185
+    9500000: //RootNode
+    13700000: Editable Poly:No0
+    13700002: Editable Poly:No1
+    13700004: Editable Poly:No10
+    13700006: Editable Poly:No100
+    13700008: Editable Poly:No101
+    13700010: Editable Poly:No102
+    13700012: Editable Poly:No103
+    13700014: Editable Poly:No104
+    13700016: Editable Poly:No105
+    13700018: Editable Poly:No106
+    13700020: Editable Poly:No107
+    13700022: Editable Poly:No108
+    13700024: Editable Poly:No109
+    13700026: Editable Poly:No11
+    13700028: Editable Poly:No110
+    13700030: Editable Poly:No111
+    13700032: Editable Poly:No112
+    13700034: Editable Poly:No113
+    13700036: Editable Poly:No114
+    13700038: Editable Poly:No115
+    13700040: Editable Poly:No116
+    13700042: Editable Poly:No117
+    13700044: Editable Poly:No118
+    13700046: Editable Poly:No119
+    13700048: Editable Poly:No12
+    13700050: Editable Poly:No120
+    13700052: Editable Poly:No121
+    13700054: Editable Poly:No122
+    13700056: Editable Poly:No123
+    13700058: Editable Poly:No124
+    13700060: Editable Poly:No125
+    13700062: Editable Poly:No126
+    13700064: Editable Poly:No127
+    13700066: Editable Poly:No128
+    13700068: Editable Poly:No129
+    13700070: Editable Poly:No13
+    13700072: Editable Poly:No130
+    13700074: Editable Poly:No131
+    13700076: Editable Poly:No132
+    13700078: Editable Poly:No133
+    13700080: Editable Poly:No134
+    13700082: Editable Poly:No135
+    13700084: Editable Poly:No136
+    13700086: Editable Poly:No137
+    13700088: Editable Poly:No138
+    13700090: Editable Poly:No139
+    13700092: Editable Poly:No14
+    13700094: Editable Poly:No140
+    13700096: Editable Poly:No141
+    13700098: Editable Poly:No142
+    13700100: Editable Poly:No143
+    13700102: Editable Poly:No144
+    13700104: Editable Poly:No145
+    13700106: Editable Poly:No146
+    13700108: Editable Poly:No147
+    13700110: Editable Poly:No148
+    13700112: Editable Poly:No149
+    13700114: Editable Poly:No15
+    13700116: Editable Poly:No150
+    13700118: Editable Poly:No151
+    13700120: Editable Poly:No152
+    13700122: Editable Poly:No153
+    13700124: Editable Poly:No154
+    13700126: Editable Poly:No155
+    13700128: Editable Poly:No156
+    13700130: Editable Poly:No157
+    13700132: Editable Poly:No158
+    13700134: Editable Poly:No159
+    13700136: Editable Poly:No16
+    13700138: Editable Poly:No160
+    13700140: Editable Poly:No161
+    13700142: Editable Poly:No162
+    13700144: Editable Poly:No163
+    13700146: Editable Poly:No164
+    13700148: Editable Poly:No165
+    13700150: Editable Poly:No166
+    13700152: Editable Poly:No167
+    13700154: Editable Poly:No168
+    13700156: Editable Poly:No169
+    13700158: Editable Poly:No17
+    13700160: Editable Poly:No170
+    13700162: Editable Poly:No171
+    13700164: Editable Poly:No172
+    13700166: Editable Poly:No173
+    13700168: Editable Poly:No174
+    13700170: Editable Poly:No175
+    13700172: Editable Poly:No176
+    13700174: Editable Poly:No177
+    13700176: Editable Poly:No178
+    13700178: Editable Poly:No179
+    13700180: Editable Poly:No18
+    13700182: Editable Poly:No180
+    13700184: Editable Poly:No181
+    13700186: Editable Poly:No182
+    13700188: Editable Poly:No183
+    13700190: Editable Poly:No184
+    13700192: Editable Poly:No185
+    13700194: Editable Poly:No19
+    13700196: Editable Poly:No2
+    13700198: Editable Poly:No20
+    13700200: Editable Poly:No21
+    13700202: Editable Poly:No22
+    13700204: Editable Poly:No23
+    13700206: Editable Poly:No24
+    13700208: Editable Poly:No25
+    13700210: Editable Poly:No26
+    13700212: Editable Poly:No27
+    13700214: Editable Poly:No28
+    13700216: Editable Poly:No29
+    13700218: Editable Poly:No3
+    13700220: Editable Poly:No30
+    13700222: Editable Poly:No31
+    13700224: Editable Poly:No32
+    13700226: Editable Poly:No33
+    13700228: Editable Poly:No34
+    13700230: Editable Poly:No35
+    13700232: Editable Poly:No36
+    13700234: Editable Poly:No37
+    13700236: Editable Poly:No38
+    13700238: Editable Poly:No39
+    13700240: Editable Poly:No4
+    13700242: Editable Poly:No40
+    13700244: Editable Poly:No41
+    13700246: Editable Poly:No42
+    13700248: Editable Poly:No43
+    13700250: Editable Poly:No44
+    13700252: Editable Poly:No45
+    13700254: Editable Poly:No46
+    13700256: Editable Poly:No47
+    13700258: Editable Poly:No48
+    13700260: Editable Poly:No49
+    13700262: Editable Poly:No5
+    13700264: Editable Poly:No50
+    13700266: Editable Poly:No51
+    13700268: Editable Poly:No52
+    13700270: Editable Poly:No53
+    13700272: Editable Poly:No54
+    13700274: Editable Poly:No55
+    13700276: Editable Poly:No56
+    13700278: Editable Poly:No57
+    13700280: Editable Poly:No58
+    13700282: Editable Poly:No59
+    13700284: Editable Poly:No6
+    13700286: Editable Poly:No60
+    13700288: Editable Poly:No61
+    13700290: Editable Poly:No62
+    13700292: Editable Poly:No63
+    13700294: Editable Poly:No64
+    13700296: Editable Poly:No65
+    13700298: Editable Poly:No66
+    13700300: Editable Poly:No67
+    13700302: Editable Poly:No68
+    13700304: Editable Poly:No69
+    13700306: Editable Poly:No7
+    13700308: Editable Poly:No70
+    13700310: Editable Poly:No71
+    13700312: Editable Poly:No72
+    13700314: Editable Poly:No73
+    13700316: Editable Poly:No74
+    13700318: Editable Poly:No75
+    13700320: Editable Poly:No76
+    13700322: Editable Poly:No77
+    13700324: Editable Poly:No78
+    13700326: Editable Poly:No79
+    13700328: Editable Poly:No8
+    13700330: Editable Poly:No80
+    13700332: Editable Poly:No81
+    13700334: Editable Poly:No82
+    13700336: Editable Poly:No83
+    13700338: Editable Poly:No84
+    13700340: Editable Poly:No85
+    13700342: Editable Poly:No86
+    13700344: Editable Poly:No87
+    13700346: Editable Poly:No88
+    13700348: Editable Poly:No89
+    13700350: Editable Poly:No9
+    13700352: Editable Poly:No90
+    13700354: Editable Poly:No91
+    13700356: Editable Poly:No92
+    13700358: Editable Poly:No93
+    13700360: Editable Poly:No94
+    13700362: Editable Poly:No95
+    13700364: Editable Poly:No96
+    13700366: Editable Poly:No97
+    13700368: Editable Poly:No98
+    13700370: Editable Poly:No99
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
