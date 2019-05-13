@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Scripts.Player.Balin.Character
 {
     [RequireComponent(typeof(CharacterController))]
-    public class MovementController : MonoBehaviour, IControllable, ILocalCharacterView
+    public class MovementController : MonoBehaviour, IControllable, ILocalCharacterView, IMovementState
     {
         private delegate IEnumerator CharacterStateDelegate();
 

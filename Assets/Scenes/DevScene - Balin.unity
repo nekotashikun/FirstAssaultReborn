@@ -6168,6 +6168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016410496}
   - component: {fileID: 2016410497}
+  - component: {fileID: 2016410498}
   m_Layer: 0
   m_Name: M4 hand 15554
   m_TagString: Player
@@ -6212,6 +6213,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2016410498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016410495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007702c6e73cdd643bed999cc137b565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 1773564856}
+  _movementAnimator: {fileID: 0}
 --- !u!1 &2019540671
 GameObject:
   m_ObjectHideFlags: 0
