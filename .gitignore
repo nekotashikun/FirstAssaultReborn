@@ -168,3 +168,9 @@ crashlytics-build.properties
 # Ignore all local history of files
 .history
 
+
+Assets/Models/Weapons/
+
+Assets/Materials/Maps/
+
+Assets/Models/Weapons\.meta
