@@ -121,7 +121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: e98eed6a7be283949991639811d31f8f, type: 3}
       propertyPath: m_Name
-      value: Shooting_Range
+      value: Shooting_Range-small
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e98eed6a7be283949991639811d31f8f, type: 3}
       propertyPath: m_LocalPosition.x
